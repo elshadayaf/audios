@@ -1,0 +1,1649 @@
+
+<!DOCTYPE html>
+<!--[if IE 9 ]> <html lang="pt-BR" class="ie9 loading-site no-js"> <![endif]-->
+<!--[if IE 8 ]> <html lang="pt-BR" class="ie8 loading-site no-js"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="pt-BR" class="loading-site no-js"> <!--<![endif]-->
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	
+
+	<script type="rocketlazyloadscript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Loja Modelo</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /></noscript>
+<meta name='robots' content='max-image-preview:large' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Loja Modelo &raquo;" href="https://lojamelhorpreco.online/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Loja Modelo &raquo;" href="https://lojamelhorpreco.online/comments/feed/" />
+<link rel="prefetch" href="https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/js/chunk.countup.fe2c1016.js" />
+<link rel="prefetch" href="https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/js/chunk.sticky-sidebar.a58a6557.js" />
+<link rel="prefetch" href="https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/js/chunk.tooltips.29144c1c.js" />
+<link rel="prefetch" href="https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/js/chunk.vendors-popups.947eca5c.js" />
+<link rel="prefetch" href="https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/js/chunk.vendors-slider.f0d2cbc9.js" />
+<link data-minify="1" rel='stylesheet' id='dashicons-css'  href='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1663599885' type='text/css' media='all' />
+<link   data-wpacu-skip-preload='1' rel='stylesheet' id='admin-bar-css'  href='https://lojamelhorpreco.online/wp-includes/css/admin-bar.min.css?ver=6.0.3' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-css'  href='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1663599885' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-common-css'  href='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/css/common.min.css?ver=3.6.7' type='text/css' media='all' />
+<link rel='stylesheet' id='iconic-was-styles-css'  href='https://lojamelhorpreco.online/wp-content/plugins/iconic-woo-attribute-swatches-premium/assets/frontend/css/main.min.css?ver=1.10.0' type='text/css' media='all' />
+<link rel='stylesheet' id='iconic-was-flatsome-styles-css'  href='https://lojamelhorpreco.online/wp-content/plugins/iconic-woo-attribute-swatches-premium/assets/frontend/css/flatsome.min.css?ver=1.10.0' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link data-minify="1" rel='stylesheet' id='wcst_public_css-css'  href='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/plugins/xl-woocommerce-sales-triggers/assets/css/wcst_combined.css?ver=1663599885' type='text/css' media='all' />
+<link rel='stylesheet' id='flickity-css'  href='https://lojamelhorpreco.online/wp-content/plugins/iconic-woo-attribute-swatches-premium/assets/vendor/flickity/flickity.min.css?ver=1.10.0' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-mercadopago-global-css-css'  href='https://lojamelhorpreco.online/wp-content/plugins/woocommerce-mercadopago/includes/../assets/css/global.min.css?ver=6.0.1' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='flatsome-swatches-frontend-css'  href='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/extensions/flatsome-swatches-frontend.css?ver=1663599885' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.6.7' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-51-css'  href='https://lojamelhorpreco.online/wp-content/uploads/elementor/css/post-51.css?ver=1663860180' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='https://lojamelhorpreco.online/wp-content/uploads/elementor/css/global.css?ver=1663860180' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='flatsome-main-css'  href='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/flatsome.css?ver=1663599885' type='text/css' media='all' />
+<style id='flatsome-main-inline-css' type='text/css'>
+@font-face {
+				font-family: "fl-icons";
+				font-display: block;
+				src: url(https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.15.5);
+				src:
+					url(https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.15.5) format("embedded-opentype"),
+					url(https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.15.5) format("woff2"),
+					url(https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.15.5) format("truetype"),
+					url(https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.15.5) format("woff"),
+					url(https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.15.5#fl-icons) format("svg");
+			}
+</style>
+<link data-minify="1" rel='stylesheet' id='flatsome-shop-css'  href='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/assets/css/flatsome-shop.css?ver=1663599885' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='wc-simulador-parcelas-css-css'  href='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/plugins/wc-simulador-parcelas/assets/css/default-pix.css?ver=1663599885' type='text/css' media='all' />
+
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='jquery-js-after'>
+
+					function optimocha_getCookie(name) {
+						var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+						return v ? v[2] : null;
+					}
+
+					function optimocha_check_wc_cart_script() {
+					var cart_src = "https://lojamelhorpreco.online/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js";
+					var script_id = "optimocha_loaded_wc_cart_fragments";
+
+						if( document.getElementById(script_id) !== null ) {
+							return false;
+						}
+
+						if( optimocha_getCookie("woocommerce_cart_hash") ) {
+							var script = document.createElement("script");
+							script.id = script_id;
+							script.src = cart_src;
+							script.async = true;
+							document.head.appendChild(script);
+						}
+					}
+
+					optimocha_check_wc_cart_script();
+					document.addEventListener("click", function(){setTimeout(optimocha_check_wc_cart_script,1000);});
+					
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lojamelhorpreco.online/xmlrpc.php?rsd" />
+<link rel="canonical" href="https://lojamelhorpreco.online/" />
+<link rel="alternate" type="application/json+oembed" href="https://lojamelhorpreco.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flojamelhorpreco.online%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://lojamelhorpreco.online/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flojamelhorpreco.online%2F&#038;format=xml" />
+        <style  type='text/css' data-wpacu-own-inline-style="true">
+            #wp-admin-bar-assetcleanup-asset-unload-rules-css-default,
+            #wp-admin-bar-assetcleanup-asset-unload-rules-js-default,
+            #wp-admin-bar-assetcleanup-plugin-unload-rules-notice-default {
+                overflow-y: auto;
+                max-height: calc(100vh - 250px);
+            }
+
+            #wp-admin-bar-assetcleanup-parent span.dashicons {
+                width: 15px;
+                height: 15px;
+                font-family: 'Dashicons', Arial, "Times New Roman", "Bitstream Charter", Times, serif !important;
+            }
+
+            #wp-admin-bar-assetcleanup-parent > a:first-child strong {
+                font-weight: bolder;
+                color: #76f203;
+            }
+
+            #wp-admin-bar-assetcleanup-parent > a:first-child:hover {
+                color: #00b9eb;
+            }
+
+            #wp-admin-bar-assetcleanup-parent > a:first-child:hover strong {
+                color: #00b9eb;
+            }
+
+            #wp-admin-bar-assetcleanup-test-mode-info {
+                margin-top: 5px !important;
+                margin-bottom: -8px !important;
+                padding-top: 3px !important;
+                border-top: 1px solid #ffffff52;
+            }
+
+            /* Add some spacing below the last text */
+            #wp-admin-bar-assetcleanup-test-mode-info-2 {
+                padding-bottom: 3px !important;
+            }
+        </style>
+        <style>.bg{opacity: 0; transition: opacity 1s; -webkit-transition: opacity 1s;} .bg-loaded{opacity: 1;}</style><!--[if IE]><link rel="stylesheet" type="text/css" href="https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="https://lojamelhorpreco.online/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]-->	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style>#wp-admin-bar-yp > .ab-item:before{content: "\f309";top:2px;}#wp-admin-bar-wyp-update .ab-item:before{content: "\f316";top:3px;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+	}
+</style>
+	    <style>
+        .woocommerce-messages .woocommerce-info {
+            margin-left: auto;
+            margin-right: auto;
+            color: inherit
+        }
+
+        .woocommerce-messages .woocommerce-info a.button.wc-forward {
+            float: left
+        }
+    </style>
+	<style id="custom-css" type="text/css">:root {--primary-color: #0a0a0a;}.header-main{height: 99px}#logo img{max-height: 99px}#logo{width:200px;}.header-bottom{min-height: 50px}.header-top{min-height: 20px}.transparent .header-main{height: 90px}.transparent #logo img{max-height: 90px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 170px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.search-form{ width: 76%;}.header-bg-color {background-color: #ffffff}.header-bottom {background-color: #f7f7f7}.header-main .nav > li > a{line-height: 16px }.stuck .header-main .nav > li > a{line-height: 50px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}.nav-dropdown{font-size:100%}.header-top{background-color:#0a0a0a!important;}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #0a0a0a;}/* Color !important */[data-text-color="primary"]{color: #0a0a0a!important;}/* Background Color */[data-text-bg="primary"]{background-color: #0a0a0a;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .header-vertical-menu__opener ,.is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #0a0a0a;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #0a0a0a}.nav-tabs > li.active > a{border-top-color: #0a0a0a}.widget_shopping_cart_content .blockUI.blockOverlay:before { border-left-color: #0a0a0a }.woocommerce-checkout-review-order .blockUI.blockOverlay:before { border-left-color: #0a0a0a }/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #0a0a0a;}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button, .current .breadcrumb-step{ background-color:#1e73be; }[data-text-bg="secondary"]{background-color: #1e73be;}/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #1e73be}/* Color !important */[data-text-color="secondary"]{color: #1e73be!important;}/* Border */.secondary.is-outline:hover{border-color:#1e73be}.success.is-underline:hover,.success.is-outline:hover,.success{background-color: #448702}.success-color, .success.is-link, .success.is-outline{color: #448702;}.success-border{border-color: #448702!important;}/* Color !important */[data-text-color="success"]{color: #448702!important;}/* Background Color */[data-text-bg="success"]{background-color: #448702;}body{font-family:"Lato", sans-serif}body{font-weight: 400}.nav > li > a {font-family:"Lato", sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family:"Lato", sans-serif;}.nav > li > a {font-weight: 700;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Lato", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 700;}button,.button{text-transform: none;}.alt-font{font-family: "Dancing Script", sans-serif;}.alt-font{font-weight: 400!important;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #0a0a0a;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover,.header:not(.transparent) .header-bottom-nav.nav > li.active > a,.header:not(.transparent) .header-bottom-nav.nav > li.current > a,.header:not(.transparent) .header-bottom-nav.nav > li > a.active,.header:not(.transparent) .header-bottom-nav.nav > li > a.current{color: #000000;}.header-bottom-nav.nav-line-bottom > li > a:before,.header-bottom-nav.nav-line-grow > li > a:before,.header-bottom-nav.nav-line > li > a:before,.header-bottom-nav.nav-box > li > a:hover,.header-bottom-nav.nav-box > li.active > a,.header-bottom-nav.nav-pills > li > a:hover,.header-bottom-nav.nav-pills > li.active > a{color:#FFF!important;background-color: #000000;}a{color: #036ef1;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 350px!important;width: 350px!important;}}.footer-2{background-color: #f2f2f2}.absolute-footer, html{background-color: #e8e8e8}button[name='update_cart'] { display: none; }/* Custom CSS *//* SIMULADOR FRETE PÁGINA DO PRODUTO*/#zipcode{height:35px !important;width:290px;margin-bottom:-04px;}#shipping-simulator{margin-top:-4px;}/* PRODUTO RELACIONANDO*/.product-main {margin-bottom:-10px;}.product-section { border-top: 0px solid #ececec;}#wc-shipping-simulator {margin-bottom: 15px;margin-top: 10px;}#wc-shipping-simulator .cep-number {height: 40px;width: 120px;font-size: 16px;float: left;border-radius: 10px;}#wc-shipping-simulator h3 {font-size: 15px !important;margin-bottom: 10px;}#wc-shipping-simulator .button {width: 30%;margin: 0 0 20px 15px;height: 30px;float: left;padding: 0;font-size: 14px;max-width: 110px;border-radius: 10px;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out}#wc-shipping-simulator .button.loading {background-color: #000;}#wc-shipping-simulator .table-freight {width: 100%;}#wc-shipping-simulator .table-freight thead {background: rgba(233, 233, 233, 0.58);}#wc-shipping-simulator .table-freight th,#wc-shipping-simulator .table-freight td {padding: 5px 10px;font-size: 16px;}#wc-shipping-simulator .table-freight tbody tr:nth-child(even) {background: rgba(233, 233, 233, 0.58);font-size: 16px;}#wc-shipping-simulator form {clear: both;}#wc-shipping-simulator form:before, #wc-shipping-simulator form:after {display: table;content: " ";}#wc-shipping-simulator form:after {clear: both;}#wc-shipping-simulator .btn {background: #333333;}/* MARGEM TOPO PG PRODUTO*/.product-main {margin-top: -15px;}/* Button */#idx-calc_shipping{width:130px;margin-bottom:-35px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}/* PAGINA PRODUTO BOTÃO COMPRAR*/#wrapper #main .shop-container .product .product-container .product-main .content-row .product-summary .cart .single_add_to_cart_button{width:75% !important;}.product-summary .cart .single_add_to_cart_button{min-height:4px;height:43px;background-color:#335dff;border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-right-radius:8px;border-bottom-left-radius:8px;}/* REMOVE FUNDO VERDE DA PARRA DE PROGRESSO PG FINALIZAÇÃO */#progress_bar.success{background-color: #fff;}.woocommerce .entry-summary .wc-simulador-parcelas-parcelamento-info-container {margin-top: 10px;}.woocommerce .wc-simulador-parcelas-detalhes-valor{margin-bottom: 15px;display: contents;}.product-info .price {font-size: 1.7em;}/* MARGEM SLIDE HOME */#main .slider-wrapper{margin-top:-50px;}/* Slider wrapper */#main .slider-wrapper{margin-top:-50px;}/* AJUSTE HTML FAVORITOS E ATENDIMENTO HEADER */#masthead tr td{border-bottom-style:none;padding-left:0px;padding-top:15px;padding-bottom:0px;}/* AJUSTE MARGEM VERIFICADOR DE SEGURANÇA */#block_widget-7 .text p{margin-top:12px;}/* SIMULADOR DE PARCELAS */.product-summary .price-wrapper .wc-simulador-parcelas-parcelamento-info-container{margin-bottom:15px;padding-top:5px;padding-left:30px;}.product-summary .price-wrapper .wc-simulador-parcelas-offer{font-size:17px;}.product-page-price .wc-simulador-parcelas-offer .woocommerce-Price-amount{line-height:1.1em;}.product-page-price ins bdi{font-size:30px;}.product-page-price del bdi{font-size:22px;}.product-page-price del bdi span{display:none;}.product-page-price .wc-simulador-parcelas-offer bdi span{}/* AJUSTE BARRA DE NEVEGAÇÃO PASSOS PG CARRINHO E CHECKOUT */#main .cart-container{padding-top:10px;}.page-title .flex-col nav{padding-top:5px;}@media (max-width: 849px){#wpadminbar{display: none!important;}html{margin-top: 0!important}}@media (min-width: 850px){.mfp-content,.stuck,button.mfp-close{top: 32px!important;}.is-full-height{height: calc(100vh - 32px)!important;}}.xdebug-var-dump{z-index: 999999;}.shortcode-error{border: 2px dashed #000;padding: 20px;color:#fff;font-size:16px;background-color: #71cedf;}.custom-product-page .shortcode-error {padding: 15% 10%;text-align: center;}.edit-block-wrapper{position: relative;}.edit-block-button{font-size: 12px!important;background-color: #555!important;margin: 6px 2px 3px 0px!important;border-radius: 4px!important;}.edit-block-button-builder{background-color: #00a0d2!important;}.label-new.menu-item > a:after{content:"Novo";}.label-hot.menu-item > a:after{content:"Quente";}.label-sale.menu-item > a:after{content:"Promoção";}.label-popular.menu-item > a:after{content:"Popular";}</style><style id="flatsome-swatches-css" type="text/css">.variations_form .ux-swatch.selected {box-shadow: 0 0 0 0.1rem #0a0a0a;}</style><style id="yellow-pencil">
+/*
+	The following CSS codes are created by the YellowPencil plugin.
+	https://yellowpencil.waspthemes.com/
+*/
+.slider-nav-reveal .wc-simulador-parcelas-offer bdi{font-size:21px;line-height:1.5em;}.slider-nav-reveal div .wc-simulador-parcelas-detalhes-valor{font-style:italic;font-size:16px;font-weight:600;color:#20bab0;}.slider-nav-reveal del bdi{display:none;}
+</style></head>
+
+<body class="home page-template-default page page-id-35 logged-in admin-bar no-customize-support theme-flatsome woocommerce-no-js nav-dropdown-has-arrow elementor-default elementor-kit-51 elementor-page elementor-page-35">
+
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+				request = true;
+	
+			b[c] = b[c].replace( rcs, ' ' );
+			// The customizer requires postMessage and CORS (if the site is cross domain).
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	</script>
+			<div id="wpadminbar" class="nojq nojs">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Barra de ferramentas">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/about.php'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">Sobre o WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/about.php'>Sobre o WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://br.wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://br.wordpress.org/support/'>Documentação</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://br.wordpress.org/support/forums/'>Suporte</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/'>Loja Modelo</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-site-name-default' class="ab-submenu"><li id='wp-admin-bar-dashboard'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/'>Painel</a></li></ul><ul id='wp-admin-bar-appearance' class="ab-submenu"><li id='wp-admin-bar-themes'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/themes.php'>Temas</a></li><li id='wp-admin-bar-widgets'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/widgets.php'>Widgets</a></li><li id='wp-admin-bar-menus'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/nav-menus.php'>Menus</a></li></ul></div></li><li id='wp-admin-bar-flatsome_panel' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/admin.php?page=flatsome-panel'><svg style="width:20px; margin-top:-4px; height:20px;vertical-align:middle;" width="184px" height="186px" viewBox="0 0 184 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch --> <title>Logo-white</title> <desc>Created with Sketch.</desc> <defs></defs> <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Logo-white" fill="#FFFFFF"> <g id="Group"> <path d="M92.6963305,153.35517 L69.6726254,130.331465 L92.6963305,107.30776 L92.6963305,66.7055226 L49.3715069,110.030346 L32.472925,93.1317642 L92.6963305,32.9083587 L92.6963305,0.803652143 L0.106126393,93.3938562 L92.6963305,185.98406 L92.6963305,153.35517 Z" id="Combined-Shape"></path> </g> <g id="Group" opacity="0.502623601" transform="translate(136.800003, 93.000000) scale(-1, 1) translate(-136.800003, -93.000000) translate(90.300003, 0.000000)"> <path d="M92.6963305,153.35517 L69.6726254,130.331465 L92.6963305,107.30776 L92.6963305,66.7055226 L49.3715069,110.030346 L32.472925,93.1317642 L92.6963305,32.9083587 L92.6963305,0.803652143 L0.106126393,93.3938562 L92.6963305,185.98406 L92.6963305,153.35517 Z" opacity="0.387068563"></path> </g> </g> </g> </svg> Flatsome</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-flatsome_panel-default' class="ab-submenu"><li id='wp-admin-bar-theme_options' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bpanel%5D='><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span class="dashicons dashicons-admin-generic" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Theme Options</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-theme_options-default' class="ab-submenu"><li id='wp-admin-bar-options_header' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bpanel%5D=header'><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span class="dashicons dashicons-arrow-up-alt dashicons-header" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Header</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-options_header-default' class="ab-submenu"><li id='wp-admin-bar-options_header_presets'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=header-presets'>Presets</a></li><li id='wp-admin-bar-options_header_logo'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=title_tagline'>Logo & Site Identity</a></li><li id='wp-admin-bar-options_header_top'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=top_bar'>Top Bar</a></li><li id='wp-admin-bar-options_header_main'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=main_bar'>Header Main</a></li><li id='wp-admin-bar-options_header_bottom'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=bottom_bar'> Header Bottom</a></li><li id='wp-admin-bar-options_header_mobile'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=header_mobile'> Header Mobile</a></li><li id='wp-admin-bar-options_header_sticky'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=header_sticky'> Sticky Header</a></li><li id='wp-admin-bar-options_header_dropdown'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=header_dropdown'>Dropdown Style</a></li></ul></div></li><li id='wp-admin-bar-options_layout'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=layout'><span class="dashicons dashicons-editor-table" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Layout</a></li><li id='wp-admin-bar-options_static_front_page'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=static_front_page'><span class="dashicons dashicons-admin-home" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Homepage</a></li><li id='wp-admin-bar-options_style' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bpanel%5D=style'><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span class="dashicons dashicons-admin-appearance" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Style</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-options_style-default' class="ab-submenu"><li id='wp-admin-bar-options_style_colors'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=colors'>Colors</a></li><li id='wp-admin-bar-options_style_global'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=global-styles'>Global Styles</a></li><li id='wp-admin-bar-options_style_type'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=type'>Typography</a></li><li id='wp-admin-bar-options_style_css'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=custom-css'>Custom CSS</a></li><li id='wp-admin-bar-options_style_lightbox'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=lightbox'>Image Lightbox</a></li></ul></div></li><li id='wp-admin-bar-options_shop' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bpanel%5D=woocommerce'><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span class="dashicons dashicons-cart" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span>&nbsp;WooCommerce</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-options_shop-default' class="ab-submenu"><li id='wp-admin-bar-options_shop_store_notice'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=woocommerce_store_notice'>Aviso da loja</a></li><li id='wp-admin-bar-options_shop_category_page'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=woocommerce_product_catalog'>Catálogo de produtos</a></li><li id='wp-admin-bar-options_shop_product_page'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=product-page'>Product Page</a></li><li id='wp-admin-bar-options_shop_my_account'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=fl-my-account'>My Account</a></li><li id='wp-admin-bar-options_shop_payment_icons'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=payment-icons'>Payment Icons</a></li><li id='wp-admin-bar-options_shop_product_images'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=woocommerce_product_images'>Imagens de produtos</a></li><li id='wp-admin-bar-options_shop_checkout'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=woocommerce_checkout'>Checkout</a></li><li id='wp-admin-bar-options_shop_cart'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=cart-checkout'>Cart</a></li><li id='wp-admin-bar-options_advanced_woocommerce_2'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-woocommerce'>Advanced</a></li></ul></div></li><li id='wp-admin-bar-options_pages'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=pages'><span class="dashicons dashicons-admin-page" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Pages</a></li><li id='wp-admin-bar-options_blog'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bpanel%5D=blog'><span class="dashicons dashicons-edit" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Blog</a></li><li id='wp-admin-bar-options_portfolio'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=fl-portfolio'><span class="dashicons dashicons-portfolio" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Portfolio</a></li><li id='wp-admin-bar-options_footer'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=footer'><span class="dashicons dashicons-arrow-down-alt" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Footer</a></li><li id='wp-admin-bar-options_menus' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bpanel%5D=nav_menus'><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span class="dashicons dashicons-menu " style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Menus</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-options_menus-default' class="ab-submenu"><li id='wp-admin-bar-options_menus_backend'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/nav-menus.php'>Back-end editor</a></li></ul></div></li><li id='wp-admin-bar-options_widgets' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bpanel%5D=widgets'><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span class="dashicons dashicons-welcome-widgets-menus" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Widgets</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-options_widgets-default' class="ab-submenu"><li id='wp-admin-bar-options_widgets_backend'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/widgets.php'>Back-end editor</a></li></ul></div></li><li id='wp-admin-bar-options_share'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=share'><span class="dashicons dashicons-share" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Share</a></li><li id='wp-admin-bar-options_notifications'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=notifications'><span class="dashicons dashicons-testimonial" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Notifications</a></li><li id='wp-admin-bar-options_reset'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https://lojamelhorpreco.online/&#038;autofocus%5Bsection%5D=advanced'><span class="dashicons dashicons-admin-generic" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Reset</a></li></ul></div></li><li id='wp-admin-bar-options_advanced' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab='><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span class="dashicons dashicons-admin-tools" style="font: normal 20px/1 'dashicons';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;"></span> Advanced</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-options_advanced-default' class="ab-submenu"><li id='wp-admin-bar-options_advanced_custom_scripts'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-globalsettings'>Global Settings</a></li><li id='wp-admin-bar-options_advanced_custom_css'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-customcss'>Custom CSS</a></li><li id='wp-admin-bar-options_advanced_performance'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-performance'>Performance</a></li><li id='wp-admin-bar-options_advanced_site_loader'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-siteloader'>Site Loader</a></li><li id='wp-admin-bar-options_advanced_site_search'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-sitesearch'>Site Search</a></li><li id='wp-admin-bar-options_advanced_instagram_api'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-instagram'>Instagram</a></li><li id='wp-admin-bar-options_advanced_google_apis'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-googleapis'>Google APIs</a></li><li id='wp-admin-bar-options_advanced_maintenance'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-maintenancemode'>Maintenance</a></li><li id='wp-admin-bar-options_advanced_404'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-404page'>404 Page</a></li><li id='wp-admin-bar-options_advanced_woocommerce'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-woocommerce'>WooCommerce</a></li><li id='wp-admin-bar-options_advanced_catalog_mode'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-catalogmode'>Catalog Mode</a></li><li id='wp-admin-bar-options_advanced_infinite_scroll'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-infinitescroll'>Infinite Scroll</a></li><li id='wp-admin-bar-options_advanced_portfolio'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-portfolio'>Portfolio</a></li><li id='wp-admin-bar-options_advanced_mobile'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-mobile'>Mobile</a></li><li id='wp-admin-bar-options_advanced_integrations'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-integrations'>Integrations</a></li><li id='wp-admin-bar-options_advanced_updates'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-updates'>Updates</a></li><li id='wp-admin-bar-options_advanced_backup'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=optionsframework&#038;tab=of-option-backupandimport'>Backup / Import</a></li></ul></div></li><li id='wp-admin-bar-flatsome_panel_license'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=flatsome-panel'>Theme Registration</a></li><li id='wp-admin-bar-flatsome_panel_support'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=flatsome-panel-support'>Help & Guides</a></li><li id='wp-admin-bar-flatsome_panel_changelog'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=flatsome-panel-changelog'>Change log</a></li><li id='wp-admin-bar-flatsome_panel_setup_wizard'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=flatsome-setup'>Setup Wizard</a></li></ul></div></li><li id='wp-admin-bar-customize' class="hide-if-no-customize"><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/customize.php?url=https%3A%2F%2Flojamelhorpreco.online%2F'>Personalizar</a></li><li id='wp-admin-bar-updates'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/update-core.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label" aria-hidden="true">14</span><span class="screen-reader-text updates-available-text">14 atualizações disponíveis</span></a></li><li id='wp-admin-bar-comments'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/edit-comments.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 comentário esperando moderação</span></a></li><li id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/post-new.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">Novo</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-new-content-default' class="ab-submenu"><li id='wp-admin-bar-new-post'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/post-new.php'>Post</a></li><li id='wp-admin-bar-new-media'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/media-new.php'>Mídia</a></li><li id='wp-admin-bar-new-page'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/post-new.php?post_type=page'>Página</a></li><li id='wp-admin-bar-new-blocks'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/post-new.php?post_type=blocks'>Block</a></li><li id='wp-admin-bar-new-e-landing-page'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/edit.php?action=elementor_new_post&#038;post_type=e-landing-page&#038;template_type=landing-page&#038;_wpnonce=a9f6c159e9#library'>Página de Aterrissagem</a></li><li id='wp-admin-bar-new-elementor_library'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/post-new.php?post_type=elementor_library'>Modelo</a></li><li id='wp-admin-bar-new-product'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/post-new.php?post_type=product'>Produto</a></li><li id='wp-admin-bar-new-shop_order'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/post-new.php?post_type=shop_order'>Pedido</a></li><li id='wp-admin-bar-new-shop_coupon'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/post-new.php?post_type=shop_coupon'>Cupom</a></li><li id='wp-admin-bar-new-user'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/user-new.php'>Usuário</a></li></ul></div></li><li id='wp-admin-bar-edit' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/post.php?post=35&#038;action=edit'>Editar página</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-edit-default' class="ab-submenu"><li id='wp-admin-bar-edit_uxbuilder'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/post.php?post=35&#038;action=edit&#038;app=uxbuilder&#038;type=editor'>Edit with UX Builder</a></li></ul></div></li><li id='wp-admin-bar-assetcleanup-parent' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_settings'>Asset CleanUp Pro<style  type='text/css'>
+#wpadminbar .wpacu-alert-sign-top-admin-bar {
+    font-size: 20px;
+    color: lightyellow;
+    vertical-align: top;
+    margin: -7px 0 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#wp-admin-bar-assetcleanup-plugin-unload-rules-notice-default .ab-item {
+	min-width: 250px !important;
+}
+
+#wp-admin-bar-assetcleanup-plugin-unload-rules-notice .ab-item > .dashicons-admin-plugins {
+	width: 20px;
+	height: 20px;
+    font-size: 20px;
+    line-height: normal;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+</style>&nbsp;<span class="wpacu-alert-sign-top-admin-bar dashicons dashicons-filter"></span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-assetcleanup-parent-default' class="ab-submenu"><li id='wp-admin-bar-assetcleanup-settings'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_settings'>Settings</a></li><li id='wp-admin-bar-assetcleanup-clear-css-js-files-cache'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin-post.php?action=assetcleanup_clear_assets_cache&#038;_wp_http_referer=%2F&#038;_wpnonce=8096931bb0'>Clear CSS/JS Files Cache</a></li><li id='wp-admin-bar-assetcleanup-homepage'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_assets_manager&#038;wpacu_for=homepage'>Manage Page Assets</a></li><li id='wp-admin-bar-assetcleanup-bulk-unloaded'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_bulk_unloads'>Bulk Changes</a></li><li id='wp-admin-bar-assetcleanup-overview'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_overview'>Overview</a></li><li id='wp-admin-bar-assetcleanup-support-forum'><a class='ab-item' href='https://www.gabelivan.com/contact/' target='_blank'>Support Ticket</a></li><li id='wp-admin-bar-assetcleanup-asset-unload-rules-notice' class="menupop"><a class='ab-item' aria-haspopup="true" href='#'><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span style="margin: -10px 0 0;" class="wpacu-alert-sign-top-admin-bar dashicons dashicons-filter"></span> &nbsp; 2 unload asset rules took effect on this frontend page</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-assetcleanup-asset-unload-rules-notice-default' class="ab-submenu"><li id='wp-admin-bar-assetcleanup-asset-unload-rules-css' class="menupop"><a class='ab-item' aria-haspopup="true" href='#'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>CSS (1)</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-assetcleanup-asset-unload-rules-css-default' class="ab-submenu"><li id='wp-admin-bar-assetcleanup-asset-unload-rules-css-wp-block-library'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_overview#wpacu-overview-css-wp-block-library'>wp-block-library</a></li></ul></div></li><li id='wp-admin-bar-assetcleanup-asset-unload-rules-js' class="menupop"><a class='ab-item' aria-haspopup="true" href='#'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>JavaScript (1)</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-assetcleanup-asset-unload-rules-js-default' class="ab-submenu"><li id='wp-admin-bar-assetcleanup-asset-unload-rules-js-comment-reply'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_overview#wpacu-overview-js-comment-reply'>comment-reply</a></li></ul></div></li></ul></div></li><li id='wp-admin-bar-assetcleanup-plugin-unload-rules-notice' class="menupop"><a class='ab-item' aria-haspopup="true" href='#'><span class="wp-admin-bar-arrow" aria-hidden="true"></span><span style="margin: -10px 0 0;" class="wpacu-alert-sign-top-admin-bar dashicons dashicons-filter"></span> &nbsp; 2 unload plugin rules took effect on this frontend page</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-assetcleanup-plugin-unload-rules-notice-default' class="ab-submenu"><li id='wp-admin-bar-assetcleanup-plugin-unload-rules-list-classic-editor/classic-editor.php'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_plugins_manager&#038;wpacu_sub_page=manage_plugins_front#wpacu-front-manage-classic-editor/classic-editor.php'><span class="dashicons dashicons-admin-plugins"></span> &nbsp;Classic Editor</a></li><li id='wp-admin-bar-assetcleanup-plugin-unload-rules-list-wp-hide-backed-notices/wp-hide-backed-notices.php'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=wpassetcleanup_plugins_manager&#038;wpacu_sub_page=manage_plugins_front#wpacu-front-manage-wp-hide-backed-notices/wp-hide-backed-notices.php'><span class="dashicons dashicons-admin-plugins"></span> &nbsp;Hide Dashboard Notifications</a></li></ul></div></li></ul></div></li><li id='wp-admin-bar-yp' class="yp"><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin.php?page=yellow-pencil-editor&#038;href=lojamelhorpreco.online%2F&#038;wyp_page_id=35&#038;wyp_page_type=page&#038;wyp_mode=single'>Edit With YellowPencil</a></li><li id='wp-admin-bar-wp-rocket' class="menupop"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/options-general.php?page=wprocket'>WP Rocket</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-rocket-default' class="ab-submenu"><li id='wp-admin-bar-rocket-settings'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/options-general.php?page=wprocket'>Configurações</a></li><li id='wp-admin-bar-purge-all'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin-post.php?action=purge_cache&#038;type=all&#038;_wp_http_referer=%2F&#038;_wpnonce=4603bdaef6'>Limpar o cache</a></li><li id='wp-admin-bar-purge-url'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin-post.php?action=purge_cache&#038;type=url&#038;_wp_http_referer=%2F&#038;_wpnonce=f7c6940ede'>Esvaziar este URL</a></li><li id='wp-admin-bar-preload-cache'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin-post.php?action=preload&#038;_wp_http_referer=%2F&#038;_wpnonce=a17c9d6161'>Pré-carregar o cache</a></li><li id='wp-admin-bar-remove-usedcss-url'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/admin-post.php?action=rocket_clear_usedcss_url&#038;_wp_http_referer=%2F&#038;_wpnonce=ffaa4c7a0b'>Limpar o CSS usado deste URL</a></li><li id='wp-admin-bar-docs'><a class='ab-item' href='https://docs.wp-rocket.me/?utm_source=wp_plugin&#038;utm_medium=wp_rocket'>Documentação</a></li><li id='wp-admin-bar-faq'><a class='ab-item' href='https://wp-rocket.me/faq/?utm_source=wp_plugin&#038;utm_medium=wp_rocket'>Perguntas Frequentes</a></li><li id='wp-admin-bar-support'><a class='ab-item' href='https://wp-rocket.me/support/?utm_source=wp_plugin&#038;utm_medium=wp_rocket'>Suporte</a></li></ul></div></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="https://lojamelhorpreco.online/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Pesquisar</label><input type="submit" class="adminbar-button" value="Pesquisar" /></form></div></li><li id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' aria-haspopup="true" href='https://lojamelhorpreco.online/wp-admin/profile.php'>Olá, <span class="display-name">hadmin</span><img alt='' src='https://secure.gravatar.com/avatar/6250f594fdafb866b006ffb2ea8d8cea?s=26&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6250f594fdafb866b006ffb2ea8d8cea?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' /></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-user-actions' class="ab-submenu"><li id='wp-admin-bar-user-info'><a class='ab-item' tabindex="-1" href='https://lojamelhorpreco.online/wp-admin/profile.php'><img alt='' src='https://secure.gravatar.com/avatar/6250f594fdafb866b006ffb2ea8d8cea?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6250f594fdafb866b006ffb2ea8d8cea?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' /><span class='display-name'>hadmin</span></a></li><li id='wp-admin-bar-edit-profile'><a class='ab-item' href='https://lojamelhorpreco.online/wp-admin/profile.php'>Editar perfil</a></li><li id='wp-admin-bar-logout'><a class='ab-item' href='https://lojamelhorpreco.online/wp-login.php?action=logout&#038;_wpnonce=4ebccd48b4'>Sair</a></li></ul></div></li></ul>			</div>
+						<a class="screen-reader-shortcut" href="https://lojamelhorpreco.online/wp-login.php?action=logout&#038;_wpnonce=4ebccd48b4">Sair</a>
+					</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header ">
+		<div class="header-wrapper">
+			<div id="top-bar" class="header-top hide-for-sticky nav-dark flex-has-center">
+    <div class="flex-row container">
+      <div class="flex-col hide-for-medium flex-left">
+          <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+              <li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons" ><a href="http://url" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon plain facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook" ></i></a><a href="http://url" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon plain  instagram tooltip" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram" ></i></a><a href="http://url" target="_blank" rel="noopener noreferrer nofollow" data-label="TikTok" class="icon plain tiktok tooltip" title="Follow on TikTok" aria-label="Follow on TikTok"><i class="icon-tiktok" ></i></a></div></li>          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-center">
+          <ul class="nav nav-center nav-small  nav-divided">
+              <li class="html custom html_topbar_left"><strong class="uppercase">Entrega expresso para Grande Sp</strong></li>          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-right">
+         <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+              <li class="html custom html_topbar_right">Rastrear pedido</li><li class="html custom html_top_right_text">Garantia de 90 dias</li>          </ul>
+      </div>
+
+            <div class="flex-col show-for-medium flex-grow">
+          <ul class="nav nav-center nav-small mobile-nav  nav-divided">
+              <li class="html custom html_topbar_left"><strong class="uppercase">Entrega expresso para Grande Sp</strong></li>          </ul>
+      </div>
+      
+    </div>
+</div>
+<div id="masthead" class="header-main hide-for-sticky">
+      <div class="header-inner flex-row container logo-left" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            
+<!-- Header logo -->
+<a href="https://lojamelhorpreco.online/" title="Loja Modelo" rel="home">
+		<img width="500" height="210" src="https://lojamelhorpreco.online/wp-content/uploads/2022/05/LOGO-MODELO-MARCA.png" class="header_logo header-logo" alt="Loja Modelo"/><img  width="500" height="210" src="https://lojamelhorpreco.online/wp-content/uploads/2022/05/LOGO-MODELO-MARCA.png" class="header-logo-dark" alt="Loja Modelo"/></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+  		<a href="#" data-open="#main-menu" data-pos="center" data-bg="main-menu-overlay" data-color="" class="is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+		
+		  <i class="icon-menu" ></i>
+		  		</a>
+	</li>            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-uppercase" >
+              <li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://lojamelhorpreco.online/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-0">Pesquisar por:</label>
+			<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Pesquisa&hellip;" value="" name="s" />
+			<input type="hidden" name="post_type" value="product" />
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Pesquisar" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Enviar">
+				<i class="icon-search" ></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
+              <li class="html custom html_nav_position_text_top"><p><img src="http://lojamelhorpreco.online/wp-content/uploads/2022/06/3643770_favorite_heart_like_likes_love_icon.svg" alt="" width="31" height="31" /></p></li><li class="html custom html_nav_position_text"><table style="width: 100%; border-collapse: collapse;" border="0">
+<tbody>
+<tr>
+<td style="width: 50%;"><img src="http://lojamelhorpreco.online/wp-content/uploads/2022/06/115766_bubble_comment_speech_chat_talk_icon.svg" alt="" width="29" height="29" /></td>
+<td style="width: 50%;">Atendimento</td>
+</tr>
+</tbody>
+</table></li><li class="header-divider"></li><li class="account-item has-icon
+     has-dropdown"
+>
+<div class="header-button">
+<a href="https://lojamelhorpreco.online/minha-conta/" class="account-link account-login
+  icon button round is-outline is-small"
+  title="Minha conta">
+
+			<span class="header-account-title">
+		Minha conta		</span>
+	
+  <i class="icon-user" ></i>
+</a>
+
+
+</div>
+<ul class="nav-dropdown  nav-dropdown-default">
+    
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active active">
+          <a href="https://lojamelhorpreco.online/minha-conta/">Painel</a>
+      <!-- empty -->
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
+          <a href="https://lojamelhorpreco.online/minha-conta/orders/">Pedidos</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
+          <a href="https://lojamelhorpreco.online/minha-conta/downloads/">Downloads</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
+          <a href="https://lojamelhorpreco.online/minha-conta/edit-address/">Endereço</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
+          <a href="https://lojamelhorpreco.online/minha-conta/edit-account/">Detalhes da conta</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
+    <a href="https://lojamelhorpreco.online/minha-conta/customer-logout/">Sair</a>
+  </li>
+</ul>
+
+</li>
+<li class="cart-item has-icon has-dropdown">
+
+<a href="https://lojamelhorpreco.online/carrinho/" title="Carrinho" class="header-cart-link is-small">
+
+
+<span class="header-cart-title">
+          <span class="cart-price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;49,90</bdi></span></span>
+  </span>
+
+    <i class="icon-shopping-cart"
+    data-icon-label="1">
+  </i>
+  </a>
+
+ <ul class="nav-dropdown nav-dropdown-default">
+    <li class="html widget_shopping_cart">
+      <div class="widget_shopping_cart_content">
+        
+
+	<ul class="woocommerce-mini-cart cart_list product_list_widget ">
+						<li class="woocommerce-mini-cart-item mini_cart_item">
+					<a href="https://lojamelhorpreco.online/carrinho/?remove_item=48191fda852ee297b886eda8c1a1f5d5&#038;_wpnonce=c6f99acf0b" class="remove remove_from_cart_button" aria-label="Remover este item" data-product_id="364" data-cart_item_key="48191fda852ee297b886eda8c1a1f5d5" data-product_sku="859561">&times;</a>											<a href="https://lojamelhorpreco.online/produto/camiseta-bjorn-tee-ss-jack-e-jones/?attribute_tamanho=M">
+							<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634021-5326_1-350x420.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" />Camiseta Bjorn Tee SS Jack &amp; Jones - M						</a>
+															<span class="quantity">1 &times; <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;49,90</bdi></span></span>				</li>
+					</ul>
+
+	<p class="woocommerce-mini-cart__total total">
+		<strong>Subtotal:</strong> <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;49,90</bdi></span>	</p>
+
+	
+	<p class="woocommerce-mini-cart__buttons buttons"><a href="https://lojamelhorpreco.online/carrinho/" class="button wc-forward">Ver carrinho</a><a href="https://lojamelhorpreco.online/finalizar-compra/" class="button checkout wc-forward">Finalizar compra</a></p>
+
+	
+
+      </div>
+    </li>
+     </ul>
+
+</li>
+            </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="cart-item has-icon">
+
+      <a href="https://lojamelhorpreco.online/carrinho/" class="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Carrinho" data-pos="right">
+  
+    <i class="icon-shopping-cart"
+    data-icon-label="1">
+  </i>
+  </a>
+
+
+  <!-- Cart Sidebar Popup -->
+  <div id="cart-popup" class="mfp-hide widget_shopping_cart">
+  <div class="cart-popup-inner inner-padding">
+      <div class="cart-popup-title text-center">
+          <h4 class="uppercase">Carrinho</h4>
+          <div class="is-divider"></div>
+      </div>
+      <div class="widget_shopping_cart_content">
+          
+
+	<ul class="woocommerce-mini-cart cart_list product_list_widget ">
+						<li class="woocommerce-mini-cart-item mini_cart_item">
+					<a href="https://lojamelhorpreco.online/carrinho/?remove_item=48191fda852ee297b886eda8c1a1f5d5&#038;_wpnonce=c6f99acf0b" class="remove remove_from_cart_button" aria-label="Remover este item" data-product_id="364" data-cart_item_key="48191fda852ee297b886eda8c1a1f5d5" data-product_sku="859561">&times;</a>											<a href="https://lojamelhorpreco.online/produto/camiseta-bjorn-tee-ss-jack-e-jones/?attribute_tamanho=M">
+							<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634021-5326_1-350x420.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" />Camiseta Bjorn Tee SS Jack &amp; Jones - M						</a>
+															<span class="quantity">1 &times; <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;49,90</bdi></span></span>				</li>
+					</ul>
+
+	<p class="woocommerce-mini-cart__total total">
+		<strong>Subtotal:</strong> <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;49,90</bdi></span>	</p>
+
+	
+	<p class="woocommerce-mini-cart__buttons buttons"><a href="https://lojamelhorpreco.online/carrinho/" class="button wc-forward">Ver carrinho</a><a href="https://lojamelhorpreco.online/finalizar-compra/" class="button checkout wc-forward">Finalizar compra</a></p>
+
+	
+
+      </div>
+             <div class="cart-sidebar-content relative"></div>  </div>
+  </div>
+
+</li>
+            </ul>
+          </div>
+
+      </div>
+     
+            <div class="container"><div class="top-divider full-width"></div></div>
+      </div><div id="wide-nav" class="header-bottom wide-nav hide-for-sticky nav-dark hide-for-medium">
+    <div class="flex-row container">
+
+                        <div class="flex-col hide-for-medium flex-left">
+                <ul class="nav header-nav header-bottom-nav nav-left  nav-line-bottom nav-size-medium nav-spacing-xlarge nav-uppercase">
+                    <li id="menu-item-19" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-19 menu-item-design-default has-dropdown"><a href="https://lojamelhorpreco.online/categoria-produto/moda/" class="nav-top-link">Moda<i class="icon-angle-down" ></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-20"><a href="https://lojamelhorpreco.online/categoria-produto/moda/feminino/">Feminino</a></li>
+	<li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-21"><a href="https://lojamelhorpreco.online/categoria-produto/moda/masculino/">Masculino</a></li>
+</ul>
+</li>
+<li id="menu-item-17" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-17 menu-item-design-default"><a href="https://lojamelhorpreco.online/categoria-produto/beleza/" class="nav-top-link">Beleza</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-18 menu-item-design-default"><a href="https://lojamelhorpreco.online/categoria-produto/brinquedos/" class="nav-top-link">Brinquedos</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-22 menu-item-design-default"><a href="https://lojamelhorpreco.online/categoria-produto/ofertas-do-dia/" class="nav-top-link">Ofertas do Dia</a></li>
+                </ul>
+            </div>
+            
+            
+                        <div class="flex-col hide-for-medium flex-right flex-grow">
+              <ul class="nav header-nav header-bottom-nav nav-right  nav-line-bottom nav-size-medium nav-spacing-xlarge nav-uppercase">
+                                 </ul>
+            </div>
+            
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	
+	<main id="main" class="">
+<div id="content" class="content-area page-wrapper" role="main">
+	<div class="row row-main">
+		<div class="large-12 col">
+			<div class="col-inner">
+				
+				
+														
+						<div class="slider-wrapper relative" id="slider-595449354" >
+    <div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-focus"
+        data-flickity-options='{
+            "cellAlign": "center",
+            "imagesLoaded": true,
+            "lazyLoad": 1,
+            "freeScroll": false,
+            "wrapAround": true,
+            "autoPlay": 6000,
+            "pauseAutoPlayOnHover" : true,
+            "prevNextButtons": true,
+            "contain" : true,
+            "adaptiveHeight" : true,
+            "dragThreshold" : 10,
+            "percentPosition": true,
+            "pageDots": true,
+            "rightToLeft": false,
+            "draggable": true,
+            "selectedAttraction": 0.1,
+            "parallax" : 0,
+            "friction": 0.6        }'
+        >
+        
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_77330119">
+								<div class="img-inner dark" >
+			<img width="1020" height="388" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/Black-Friday-Banner.jpg" class="attachment-original size-original" alt="" srcset="https://lojamelhorpreco.online/wp-content/uploads/2022/06/Black-Friday-Banner.jpg 1020w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/Black-Friday-Banner-510x194.jpg 510w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/Black-Friday-Banner-300x114.jpg 300w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/Black-Friday-Banner-768x292.jpg 768w" sizes="(max-width: 1020px) 100vw, 1020px" />						
+					</div>
+								
+<style>
+#image_77330119 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+     </div>
+
+     <div class="loading-spin dark large centered"></div>
+
+          <style>
+            #slider-595449354 .flickity-slider > * { max-width: 1080px !important; }
+     </style>
+     	</div>
+
+
+<div class="container section-title-container" style="margin-top:0px;margin-bottom:10px;"><h3 class="section-title section-title-center"><b></b><span class="section-title-main" style="color:rgb(0, 0, 0);"><i class="icon-angle-down" ></i>DESTAQUES PARA VOCÊ</span><b></b></h3></div>
+
+  
+    <div class="row large-columns-4 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-reveal slider-nav-push"  data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+
+  	
+	     <div class="product-small col has-hover product type-product post-364 status-publish first instock product_cat-masculino product_cat-moda has-post-thumbnail shipping-taxable purchasable product-type-variable">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+<div class="badge callout badge-circle"><div class="badge-inner callout-new-bg is-small new-bubble">Novo!</div></div></div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-bjorn-tee-ss-jack-e-jones/" aria-label="Camiseta Bjorn Tee SS Jack &amp; Jones">
+					<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634021-5326_1-350x420.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" /><img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634021-5326_2-350x420.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" />				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+							</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-bjorn-tee-ss-jack-e-jones/" data-quantity="1" class="add-to-cart-grid no-padding is-transparent product_type_variable add_to_cart_button" data-product_id="364" data-product_sku="859561" aria-label="Selecione as opções para &ldquo;Camiseta Bjorn Tee SS Jack &amp; Jones&rdquo;" rel="nofollow"><div class="cart-icon tooltip is-small" title="Ver opções"><strong>+</strong></div></a>  <a class="quick-view" data-prod="364" href="#quick-view">Visualização Rápida</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Masculino		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://lojamelhorpreco.online/produto/camiseta-bjorn-tee-ss-jack-e-jones/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Camiseta Bjorn Tee SS Jack &#038; Jones</a></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;49,90</bdi></span> <span class="wc-simulador-parcelas-parcelamento-info-container"><span class="wc-simulador-parcelas-parcelamento-info best-value no-fee">ou 3x de <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;16,63</bdi></span></span> </span><span class="wc-simulador-parcelas-offer"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;47,41</bdi></span> <span class="wc-simulador-parcelas-detalhes-valor">no PIX </span></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-295 status-publish instock product_cat-masculino product_cat-moda has-post-thumbnail sale shipping-taxable purchasable product-type-variable">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">-33%</span></div></div>
+<div class="badge callout badge-circle"><div class="badge-inner callout-new-bg is-small new-bubble">Novo!</div></div></div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-randal-tee-jack-e-jones/" aria-label="Camiseta Randal Tee Jack &amp; Jones">
+					<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634050-2891_1-350x420.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" /><img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634050-2891_3-350x420.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" />				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+							</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-randal-tee-jack-e-jones/" data-quantity="1" class="add-to-cart-grid no-padding is-transparent product_type_variable add_to_cart_button" data-product_id="295" data-product_sku="89567" aria-label="Selecione as opções para &ldquo;Camiseta Randal Tee Jack &amp; Jones&rdquo;" rel="nofollow"><div class="cart-icon tooltip is-small" title="Ver opções"><strong>+</strong></div></a>  <a class="quick-view" data-prod="295" href="#quick-view">Visualização Rápida</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Masculino		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://lojamelhorpreco.online/produto/camiseta-randal-tee-jack-e-jones/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Camiseta Randal Tee Jack &#038; Jones</a></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;89,90</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;59,90</bdi></span></ins> <span class="wc-simulador-parcelas-parcelamento-info-container"><span class="wc-simulador-parcelas-parcelamento-info best-value no-fee">ou 3x de <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;19,97</bdi></span></span> </span><span class="wc-simulador-parcelas-offer"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;56,91</bdi></span> <span class="wc-simulador-parcelas-detalhes-valor">no PIX </span></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-286 status-publish instock product_cat-masculino product_cat-moda has-post-thumbnail sale shipping-taxable purchasable product-type-variable">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">-8%</span></div></div>
+<div class="badge callout badge-circle"><div class="badge-inner callout-new-bg is-small new-bubble">Novo!</div></div></div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-osaka-entry-tee-superdry-12/" aria-label="Camiseta Osaka Entry Tee Superdry 12">
+					<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/538228-0286_1-350x420.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" /><img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/538228-0286_2-350x420.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" />				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+							</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-osaka-entry-tee-superdry-12/" data-quantity="1" class="add-to-cart-grid no-padding is-transparent product_type_variable add_to_cart_button" data-product_id="286" data-product_sku="805965" aria-label="Selecione as opções para &ldquo;Camiseta Osaka Entry Tee Superdry 12&rdquo;" rel="nofollow"><div class="cart-icon tooltip is-small" title="Ver opções"><strong>+</strong></div></a>  <a class="quick-view" data-prod="286" href="#quick-view">Visualização Rápida</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Masculino		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://lojamelhorpreco.online/produto/camiseta-osaka-entry-tee-superdry-12/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Camiseta Osaka Entry Tee Superdry 12</a></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;59,90</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;54,90</bdi></span></ins> <span class="wc-simulador-parcelas-parcelamento-info-container"><span class="wc-simulador-parcelas-parcelamento-info best-value no-fee">ou 3x de <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;18,30</bdi></span></span> </span><span class="wc-simulador-parcelas-offer"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;52,16</bdi></span> <span class="wc-simulador-parcelas-detalhes-valor">no PIX </span></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-145 status-publish last instock product_cat-masculino product_cat-moda has-post-thumbnail shipping-taxable purchasable product-type-variable">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+<div class="badge callout badge-circle"><div class="badge-inner callout-new-bg is-small new-bubble">Novo!</div></div></div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-jeansmaker-tee-lee-jeans/" aria-label="Camiseta Jeansmaker Tee Lee Jeans">
+					<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/863232-6132_1-350x420.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" /><img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/863232-6132_2-350x420.jpeg" class="show-on-hover absolute fill hide-for-small back-image" alt="" />				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+							</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-jeansmaker-tee-lee-jeans/" data-quantity="1" class="add-to-cart-grid no-padding is-transparent product_type_variable add_to_cart_button" data-product_id="145" data-product_sku="" aria-label="Selecione as opções para &ldquo;Camiseta Jeansmaker Tee Lee Jeans&rdquo;" rel="nofollow"><div class="cart-icon tooltip is-small" title="Ver opções"><strong>+</strong></div></a>  <a class="quick-view" data-prod="145" href="#quick-view">Visualização Rápida</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Masculino		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://lojamelhorpreco.online/produto/camiseta-jeansmaker-tee-lee-jeans/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Camiseta Jeansmaker Tee Lee Jeans</a></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;89,90</bdi></span> <span class="wc-simulador-parcelas-parcelamento-info-container"><span class="wc-simulador-parcelas-parcelamento-info best-value no-fee">ou 3x de <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;29,97</bdi></span></span> </span><span class="wc-simulador-parcelas-offer"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;85,41</bdi></span> <span class="wc-simulador-parcelas-detalhes-valor">no PIX </span></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div></div>
+	<section class="section" id="section_1890141054">
+		<div class="bg section-bg fill bg-fill  bg-loaded" >
+
+			
+			
+			
+
+		</div>
+
+		
+
+		<div class="section-content relative">
+			
+<div class="row row-collapse align-center"  id="row-1661988315">
+
+	<div id="col-593581603" class="col medium-7 small-12 large-5"  >
+				<div class="col-inner text-center"  >
+			
+			
+<h6>Para ele e ela</h6>
+	<div id="text-1742819130" class="text">
+		
+<h2>Essenciais de verão</h2>
+		
+<style>
+#text-1742819130 {
+  font-size: 1.5rem;
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+<style>
+#row-1661988315 > .col > .col-inner {
+  padding: 0px 0px 10px 0px;
+}
+</style>
+</div>
+<div class="row row-small"  id="row-300034075">
+
+	<div id="col-1892384934" class="col medium-4 small-12 large-4"  >
+				<div class="col-inner text-center"  >
+			
+			
+	<div class="box has-hover   has-hover box-text-bottom" >
+
+		<div class="box-image" >
+						<div class="image-cover" style="padding-top:400px;">
+				<img width="640" height="960" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/honey-yanibel-minaya-cruz-QJqWjmQ2jYQ-unsplash.jpg" class="attachment- size-" alt="" srcset="https://lojamelhorpreco.online/wp-content/uploads/2022/06/honey-yanibel-minaya-cruz-QJqWjmQ2jYQ-unsplash.jpg 640w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/honey-yanibel-minaya-cruz-QJqWjmQ2jYQ-unsplash-200x300.jpg 200w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/honey-yanibel-minaya-cruz-QJqWjmQ2jYQ-unsplash-510x765.jpg 510w" sizes="(max-width: 640px) 100vw, 640px" />											</div>
+					</div>
+
+		<div class="box-text text-center dark" style="background-color:rgb(41, 41, 41);">
+			<div class="box-text-inner">
+				
+	<div id="gap-2087638494" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-2087638494 {
+  padding-top: 10px;
+}
+</style>
+	</div>
+	
+	<div id="text-2038319560" class="text">
+		
+<h3 class="uppercase">elas</h3>
+		
+<style>
+#text-2038319560 {
+  font-size: 1.5rem;
+}
+</style>
+	</div>
+	
+<a class="button white"  style="border-radius:99px;">
+    <span>Confira</span>
+  </a>
+
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-131305939" class="col medium-4 small-12 large-4"  >
+				<div class="col-inner text-center"  >
+			
+			
+	<div class="box has-hover   has-hover box-text-bottom" >
+
+		<div class="box-image" >
+						<div class="image-cover" style="padding-top:400px;">
+				<img width="640" height="853" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/xavier-teo-SxAXphIPWeg-unsplash.jpg" class="attachment- size-" alt="" srcset="https://lojamelhorpreco.online/wp-content/uploads/2022/06/xavier-teo-SxAXphIPWeg-unsplash.jpg 640w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/xavier-teo-SxAXphIPWeg-unsplash-225x300.jpg 225w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/xavier-teo-SxAXphIPWeg-unsplash-510x680.jpg 510w" sizes="(max-width: 640px) 100vw, 640px" />											</div>
+					</div>
+
+		<div class="box-text text-center dark" style="background-color:rgb(41, 41, 41);">
+			<div class="box-text-inner">
+				
+	<div id="gap-1154784959" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1154784959 {
+  padding-top: 10px;
+}
+</style>
+	</div>
+	
+	<div id="text-3988234674" class="text">
+		
+<h3 class="uppercase">Todos</h3>
+		
+<style>
+#text-3988234674 {
+  font-size: 1.5rem;
+}
+</style>
+	</div>
+	
+<a class="button white"  style="border-radius:99px;">
+    <span>Confira</span>
+  </a>
+
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1120432231" class="col medium-4 small-12 large-4"  >
+				<div class="col-inner text-center"  >
+			
+			
+	<div class="box has-hover   has-hover box-text-bottom" >
+
+		<div class="box-image" >
+						<div class="image-cover" style="padding-top:400px;">
+				<img width="640" height="958" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/karsten-winegeart-8RYgfbiTSVU-unsplash.jpg" class="attachment- size-" alt="" srcset="https://lojamelhorpreco.online/wp-content/uploads/2022/06/karsten-winegeart-8RYgfbiTSVU-unsplash.jpg 640w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/karsten-winegeart-8RYgfbiTSVU-unsplash-200x300.jpg 200w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/karsten-winegeart-8RYgfbiTSVU-unsplash-510x763.jpg 510w" sizes="(max-width: 640px) 100vw, 640px" />											</div>
+					</div>
+
+		<div class="box-text text-center dark" style="background-color:rgb(41, 41, 41);">
+			<div class="box-text-inner">
+				
+	<div id="gap-2134622347" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-2134622347 {
+  padding-top: 10px;
+}
+</style>
+	</div>
+	
+	<div id="text-2243694357" class="text">
+		
+<h3 class="uppercase">Eles</h3>
+		
+<style>
+#text-2243694357 {
+  font-size: 1.5rem;
+}
+</style>
+	</div>
+	
+<a class="button white"  style="border-radius:99px;">
+    <span>Confira</span>
+  </a>
+
+			</div>
+		</div>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+		</div>
+
+		
+<style>
+#section_1890141054 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#section_1890141054 .ux-shape-divider--top svg {
+  height: 150px;
+  --divider-top-width: 100%;
+}
+#section_1890141054 .ux-shape-divider--bottom svg {
+  height: 150px;
+  --divider-width: 100%;
+}
+@media (min-width:850px) {
+  #section_1890141054 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+</style>
+	</section>
+	
+<div class="container section-title-container" style="margin-top:20px;margin-bottom:10px;"><h3 class="section-title section-title-center"><b></b><span class="section-title-main" style="color:rgb(0, 0, 0);"><i class="icon-angle-down" ></i>Em oferta</span><b></b></h3></div>
+
+  
+    <div class="row large-columns-4 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-reveal slider-nav-push"  data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : false}'>
+
+  	
+	     <div class="product-small col has-hover product type-product post-364 status-publish first instock product_cat-masculino product_cat-moda has-post-thumbnail shipping-taxable purchasable product-type-variable">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+<div class="badge callout badge-circle"><div class="badge-inner callout-new-bg is-small new-bubble">Novo!</div></div></div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-bjorn-tee-ss-jack-e-jones/" aria-label="Camiseta Bjorn Tee SS Jack &amp; Jones">
+					<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634021-5326_1-350x420.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" /><img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634021-5326_2-350x420.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" />				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+							</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-bjorn-tee-ss-jack-e-jones/" data-quantity="1" class="add-to-cart-grid no-padding is-transparent product_type_variable add_to_cart_button" data-product_id="364" data-product_sku="859561" aria-label="Selecione as opções para &ldquo;Camiseta Bjorn Tee SS Jack &amp; Jones&rdquo;" rel="nofollow"><div class="cart-icon tooltip is-small" title="Ver opções"><strong>+</strong></div></a>  <a class="quick-view" data-prod="364" href="#quick-view">Visualização Rápida</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Masculino		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://lojamelhorpreco.online/produto/camiseta-bjorn-tee-ss-jack-e-jones/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Camiseta Bjorn Tee SS Jack &#038; Jones</a></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;49,90</bdi></span> <span class="wc-simulador-parcelas-parcelamento-info-container"><span class="wc-simulador-parcelas-parcelamento-info best-value no-fee">ou 3x de <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;16,63</bdi></span></span> </span><span class="wc-simulador-parcelas-offer"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;47,41</bdi></span> <span class="wc-simulador-parcelas-detalhes-valor">no PIX </span></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-295 status-publish instock product_cat-masculino product_cat-moda has-post-thumbnail sale shipping-taxable purchasable product-type-variable">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">-33%</span></div></div>
+<div class="badge callout badge-circle"><div class="badge-inner callout-new-bg is-small new-bubble">Novo!</div></div></div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-randal-tee-jack-e-jones/" aria-label="Camiseta Randal Tee Jack &amp; Jones">
+					<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634050-2891_1-350x420.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" /><img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/634050-2891_3-350x420.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" />				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+							</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-randal-tee-jack-e-jones/" data-quantity="1" class="add-to-cart-grid no-padding is-transparent product_type_variable add_to_cart_button" data-product_id="295" data-product_sku="89567" aria-label="Selecione as opções para &ldquo;Camiseta Randal Tee Jack &amp; Jones&rdquo;" rel="nofollow"><div class="cart-icon tooltip is-small" title="Ver opções"><strong>+</strong></div></a>  <a class="quick-view" data-prod="295" href="#quick-view">Visualização Rápida</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Masculino		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://lojamelhorpreco.online/produto/camiseta-randal-tee-jack-e-jones/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Camiseta Randal Tee Jack &#038; Jones</a></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;89,90</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;59,90</bdi></span></ins> <span class="wc-simulador-parcelas-parcelamento-info-container"><span class="wc-simulador-parcelas-parcelamento-info best-value no-fee">ou 3x de <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;19,97</bdi></span></span> </span><span class="wc-simulador-parcelas-offer"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;56,91</bdi></span> <span class="wc-simulador-parcelas-detalhes-valor">no PIX </span></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-286 status-publish instock product_cat-masculino product_cat-moda has-post-thumbnail sale shipping-taxable purchasable product-type-variable">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+		<div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">-8%</span></div></div>
+<div class="badge callout badge-circle"><div class="badge-inner callout-new-bg is-small new-bubble">Novo!</div></div></div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-osaka-entry-tee-superdry-12/" aria-label="Camiseta Osaka Entry Tee Superdry 12">
+					<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/538228-0286_1-350x420.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" /><img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/538228-0286_2-350x420.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" />				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+							</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-osaka-entry-tee-superdry-12/" data-quantity="1" class="add-to-cart-grid no-padding is-transparent product_type_variable add_to_cart_button" data-product_id="286" data-product_sku="805965" aria-label="Selecione as opções para &ldquo;Camiseta Osaka Entry Tee Superdry 12&rdquo;" rel="nofollow"><div class="cart-icon tooltip is-small" title="Ver opções"><strong>+</strong></div></a>  <a class="quick-view" data-prod="286" href="#quick-view">Visualização Rápida</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Masculino		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://lojamelhorpreco.online/produto/camiseta-osaka-entry-tee-superdry-12/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Camiseta Osaka Entry Tee Superdry 12</a></p></div><div class="price-wrapper">
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;59,90</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;54,90</bdi></span></ins> <span class="wc-simulador-parcelas-parcelamento-info-container"><span class="wc-simulador-parcelas-parcelamento-info best-value no-fee">ou 3x de <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;18,30</bdi></span></span> </span><span class="wc-simulador-parcelas-offer"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;52,16</bdi></span> <span class="wc-simulador-parcelas-detalhes-valor">no PIX </span></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div><div class="product-small col has-hover product type-product post-145 status-publish last instock product_cat-masculino product_cat-moda has-post-thumbnail shipping-taxable purchasable product-type-variable">
+	<div class="col-inner">
+	
+<div class="badge-container absolute left top z-1">
+<div class="badge callout badge-circle"><div class="badge-inner callout-new-bg is-small new-bubble">Novo!</div></div></div>
+	<div class="product-small box ">
+		<div class="box-image">
+			<div class="image-fade_in_back">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-jeansmaker-tee-lee-jeans/" aria-label="Camiseta Jeansmaker Tee Lee Jeans">
+					<img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/863232-6132_1-350x420.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" /><img width="350" height="420" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/863232-6132_2-350x420.jpeg" class="show-on-hover absolute fill hide-for-small back-image" alt="" />				</a>
+			</div>
+			<div class="image-tools is-small top right show-on-hover">
+							</div>
+			<div class="image-tools is-small hide-for-small bottom left show-on-hover">
+							</div>
+			<div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+				<a href="https://lojamelhorpreco.online/produto/camiseta-jeansmaker-tee-lee-jeans/" data-quantity="1" class="add-to-cart-grid no-padding is-transparent product_type_variable add_to_cart_button" data-product_id="145" data-product_sku="" aria-label="Selecione as opções para &ldquo;Camiseta Jeansmaker Tee Lee Jeans&rdquo;" rel="nofollow"><div class="cart-icon tooltip is-small" title="Ver opções"><strong>+</strong></div></a>  <a class="quick-view" data-prod="145" href="#quick-view">Visualização Rápida</a>			</div>
+					</div>
+
+		<div class="box-text box-text-products">
+			<div class="title-wrapper">		<p class="category uppercase is-smaller no-text-overflow product-cat op-7">
+			Masculino		</p>
+	<p class="name product-title woocommerce-loop-product__title"><a href="https://lojamelhorpreco.online/produto/camiseta-jeansmaker-tee-lee-jeans/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">Camiseta Jeansmaker Tee Lee Jeans</a></p></div><div class="price-wrapper">
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;89,90</bdi></span> <span class="wc-simulador-parcelas-parcelamento-info-container"><span class="wc-simulador-parcelas-parcelamento-info best-value no-fee">ou 3x de <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;29,97</bdi></span></span> </span><span class="wc-simulador-parcelas-offer"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#82;&#36;</span>&nbsp;85,41</bdi></span> <span class="wc-simulador-parcelas-detalhes-valor">no PIX </span></span></span>
+</div>		</div>
+	</div>
+		</div>
+</div></div>
+<div class="row"  id="row-746242600">
+
+	<div id="col-1203057931" class="col medium-4 small-12 large-4"  >
+				<div class="col-inner"  >
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_654183318">
+		<a class="" href="/"  >						<div class="img-inner dark" >
+			<img width="434" height="136" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/whatsapp.png" class="attachment-original size-original" alt="" srcset="https://lojamelhorpreco.online/wp-content/uploads/2022/06/whatsapp.png 434w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/whatsapp-300x94.png 300w" sizes="(max-width: 434px) 100vw, 434px" />						
+					</div>
+						</a>		
+<style>
+#image_654183318 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-508512364" class="col medium-4 small-12 large-4"  >
+				<div class="col-inner"  >
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1550762271">
+		<a class="" href="/"  >						<div class="img-inner dark" >
+			<img width="434" height="135" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/insta.png" class="attachment-original size-original" alt="" srcset="https://lojamelhorpreco.online/wp-content/uploads/2022/06/insta.png 434w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/insta-300x93.png 300w" sizes="(max-width: 434px) 100vw, 434px" />						
+					</div>
+						</a>		
+<style>
+#image_1550762271 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+
+	<div id="col-1644483854" class="col medium-4 small-12 large-4"  >
+				<div class="col-inner"  >
+			
+			
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_411924905">
+		<a class="" href="/"  >						<div class="img-inner dark" >
+			<img width="434" height="139" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/face.png" class="attachment-original size-original" alt="" srcset="https://lojamelhorpreco.online/wp-content/uploads/2022/06/face.png 434w, https://lojamelhorpreco.online/wp-content/uploads/2022/06/face-300x96.png 300w" sizes="(max-width: 434px) 100vw, 434px" />						
+					</div>
+						</a>		
+<style>
+#image_411924905 {
+  width: 100%;
+}
+</style>
+	</div>
+	
+		</div>
+					</div>
+
+	
+</div>
+
+						
+												</div>
+		</div>
+	</div>
+</div>
+
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+	
+<!-- FOOTER 1 -->
+<div class="footer-widgets footer footer-1">
+		<div class="row large-columns-1 mb-0">
+	   		
+		<div id="block_widget-5" class="col pb-0 widget block_widget">
+		
+		<div class="block-edit-link" data-title="Edit Block: Primeiro Footer"   data-backend="https://lojamelhorpreco.online/wp-admin/post.php?post=91&#038;action=edit" data-link="https://lojamelhorpreco.online/wp-admin/post.php?post=35&#038;action=edit&#038;app=uxbuilder&#038;type=editor&#038;edit_post_id=91"></div><div class="row row-collapse row-full-width"  id="row-261626365">
+
+
+	<div id="col-977950058" class="col medium-4 large-4"  >
+				<div class="col-inner"  >
+			
+			
+
+
+		<div class="icon-box featured-box icon-box-left text-left"  >
+					<div class="icon-box-img" style="width: 60px">
+				<div class="icon">
+					<div class="icon-inner" >
+						<img width="32" height="32" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/3741751_bussiness_dellivery_ecommerce_marketplace_onlinestore_icon.svg" class="attachment-medium size-medium" alt="" />					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+
+<p class="elementor-icon-box-title"><strong>FRETE GRÁTIS</strong><br />Entrega grátis para todo o Brasil</p>
+
+		</div>
+	</div>
+	
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1721881437" class="col medium-4 large-4"  >
+				<div class="col-inner"  >
+			
+			
+
+
+		<div class="icon-box featured-box icon-box-left text-left"  >
+					<div class="icon-box-img" style="width: 60px">
+				<div class="icon">
+					<div class="icon-inner" >
+						<img width="32" height="32" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/3741755_bussiness_credit-card_ecommerce_marketplace_onlinestore_icon.svg" class="attachment-medium size-medium" alt="" />					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+
+<p class="elementor-icon-box-title"><strong>PARCELAMENTO</strong><br />Você pode parcelar em até 12X</p>
+
+		</div>
+	</div>
+	
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1477703912" class="col medium-4 large-4"  >
+				<div class="col-inner"  >
+			
+			
+
+
+		<div class="icon-box featured-box icon-box-left text-left"  >
+					<div class="icon-box-img" style="width: 60px">
+				<div class="icon">
+					<div class="icon-inner" >
+						<img width="32" height="32" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/3741738_assurance_bussiness_ecommerce_marketplace_onlinestore_icon.svg" class="attachment-medium size-medium" alt="" />					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+
+<p class="elementor-icon-box-title"><strong>SEGURANÇA</strong><br />Certificado SSL Criptografia de ponta</p>
+
+		</div>
+	</div>
+	
+	
+
+		</div>
+					</div>
+
+	
+
+</div>
+		</div>
+		        
+		</div>
+</div>
+
+<!-- FOOTER 2 -->
+<div class="footer-widgets footer footer-2 ">
+		<div class="row large-columns-1 mb-0">
+	   		
+		<div id="block_widget-7" class="col pb-0 widget block_widget">
+		
+		<div class="block-edit-link" data-title="Edit Block: Segurança e Pagamento"   data-backend="https://lojamelhorpreco.online/wp-admin/post.php?post=74&#038;action=edit" data-link="https://lojamelhorpreco.online/wp-admin/post.php?post=35&#038;action=edit&#038;app=uxbuilder&#038;type=editor&#038;edit_post_id=74"></div><div class="row row-collapse row-full-width"  id="row-214154443">
+
+
+	<div id="col-16883252" class="col medium-4 large-4"  >
+				<div class="col-inner"  >
+			
+			
+
+
+		<div class="icon-box featured-box icon-box-left text-left"  style="margin:0px 0px 0 0px;">
+					<div class="icon-box-img" style="width: 30px">
+				<div class="icon">
+					<div class="icon-inner" >
+						<img width="300" height="300" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/3225179_app_logo_media_popular_social_icon.svg" class="attachment-medium size-medium" alt="" />					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+
+	<div id="text-1501240841" class="text">
+		
+
+<strong>(11) 99987-5678</strong>
+		
+<style>
+#text-1501240841 {
+  line-height: 2.2;
+  text-align: left;
+}
+</style>
+	</div>
+	
+
+		</div>
+	</div>
+	
+	
+
+		<div class="icon-box featured-box icon-box-left text-left"  style="margin:0px 0px 5px 0px;">
+					<div class="icon-box-img" style="width: 30px">
+				<div class="icon">
+					<div class="icon-inner" >
+						<img width="32" height="32" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/5340267_e_email_letter_mail_icon.svg" class="attachment-medium size-medium" alt="" />					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+
+	<div id="text-3503812052" class="text">
+		
+
+<strong>sac@suaempresa.com.br</strong>
+		
+<style>
+#text-3503812052 {
+  line-height: 2.2;
+  text-align: left;
+}
+</style>
+	</div>
+	
+
+		</div>
+	</div>
+	
+	
+	<div class="ux-menu stack stack-col justify-start ux-menu--divider-solid">
+		
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://lojamelhorpreco.online/minha-conta/"  >
+			<i class="ux-menu-link__icon text-center icon-user" ></i>			<span class="ux-menu-link__text">
+				Minha Conta			</span>
+		</a>
+	</div>
+	
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://lojamelhorpreco.online/sample-page/"  >
+			<i class="ux-menu-link__icon text-center icon-map-pin-fill" ></i>			<span class="ux-menu-link__text">
+				Rastreamento			</span>
+		</a>
+	</div>
+	
+
+
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-102265810" class="col medium-4 large-4"  >
+				<div class="col-inner"  >
+			
+			
+
+	<div class="ux-menu stack stack-col justify-start ux-menu--divider-solid">
+		
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://lojamelhorpreco.online/politica-de-privacidade/"  >
+						<span class="ux-menu-link__text">
+				Política de privacidade			</span>
+		</a>
+	</div>
+	
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://lojamelhorpreco.online/termos-de-uso/"  >
+						<span class="ux-menu-link__text">
+				Termos de uso			</span>
+		</a>
+	</div>
+	
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://lojamelhorpreco.online/politica-de-reembolso/"  >
+						<span class="ux-menu-link__text">
+				Política de reembolso			</span>
+		</a>
+	</div>
+	
+
+	<div class="ux-menu-link flex menu-item">
+		<a class="ux-menu-link__link flex" href="https://lojamelhorpreco.online/politica-de-troca/"  >
+						<span class="ux-menu-link__text">
+				Política de troca			</span>
+		</a>
+	</div>
+	
+
+
+	</div>
+	
+
+		</div>
+					</div>
+
+	
+
+	<div id="col-1630260094" class="col medium-4 large-4"  >
+				<div class="col-inner"  >
+			
+			
+
+
+
+<img src="https://pay.hotmart.com/assets/images/brands/MASTER_CARD.svg" alt="MASTER_CARD" data-v-3308b28d="" /><img src="https://pay.hotmart.com/assets/images/brands/VISA.svg" alt="VISA" data-v-3308b28d="" /><img src="https://pay.hotmart.com/assets/images/brands/ELO.svg" alt="ELO" data-v-3308b28d="" /><img src="https://pay.hotmart.com/assets/images/brands/HIPERCARD.svg" alt="HIPERCARD" data-v-3308b28d="" /><img src="https://pay.hotmart.com/assets/images/brands/BILLET.svg" alt="Boleto" data-v-3308b28d="" /><img data-v-3308b28d="" />
+
+
+		<div class="icon-box featured-box icon-box-left text-left"  style="margin:10px 0px 0px 0px;">
+					<div class="icon-box-img" style="width: 60px">
+				<div class="icon">
+					<div class="icon-inner" >
+						<img width="200" height="200" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/2428668_app_lock_lockscreen_open-line_screen_icon.svg" class="attachment-medium size-medium" alt="" />					</div>
+				</div>
+			</div>
+				<div class="icon-box-text last-reset">
+									
+
+	<div id="text-3266835803" class="text">
+		
+
+<p class="elementor-icon-box-title"><a href="https://transparencyreport.google.com/safe-browsing/search?url=woocommerce.primehube.com.br&amp;hl=pt_BR"><strong>Verificador</strong></a> | Comprar segura site protegido com certificado SSL</p>
+		
+<style>
+#text-3266835803 {
+  line-height: 1.15;
+  text-align: left;
+}
+</style>
+	</div>
+	
+
+		</div>
+	</div>
+	
+	
+<div class="container section-title-container" style="margin-top:0px;margin-bottom:-10px;max-width:341px;"><h4 class="section-title section-title-center"><b></b><span class="section-title-main" style="font-size:78%;color:rgb(123, 123, 123);">Formas de envio:</span><b></b></h4></div>
+
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1570884649">
+								<div class="img-inner dark" style="margin:0px 0px 0px 70px;">
+			<img width="247" height="43" src="https://lojamelhorpreco.online/wp-content/uploads/2022/06/correios-jadlog.png" class="attachment-original size-original" alt="" />						
+					</div>
+								
+<style>
+#image_1570884649 {
+  width: 80%;
+}
+</style>
+	</div>
+	
+
+
+		</div>
+					</div>
+
+	
+
+</div>
+		</div>
+		        
+		</div>
+</div>
+
+
+
+<div class="absolute-footer light medium-text-center small-text-center">
+  <div class="container clearfix">
+
+          <div class="footer-secondary pull-right">
+                  <div class="footer-text inline-block small-block">
+            Sua Marca Ltda. CNPJ: 10.5678/0001-01 Av. Paulista 1175 São Paulo - SP.          </div>
+                      </div>
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        Copyright 2022 © <strong>Cynex Tecnologia</strong>      </div>
+          </div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle" id="top-link" aria-label="Go to top"><i class="icon-angle-up" ></i></a>
+
+</footer>
+
+</div>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+	
+	<div class="sidebar-menu no-scrollbar text-center">
+
+		
+					<ul class="nav nav-sidebar nav-vertical nav-uppercase nav-anim" data-tab="1">
+				<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form-flat is-normal"><form role="search" method="get" class="searchform" action="https://lojamelhorpreco.online/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-1">Pesquisar por:</label>
+			<input type="search" id="woocommerce-product-search-field-1" class="search-field mb-0" placeholder="Pesquisa&hellip;" value="" name="s" />
+			<input type="hidden" name="post_type" value="product" />
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Pesquisar" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Enviar">
+				<i class="icon-search" ></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li><li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-19"><a href="https://lojamelhorpreco.online/categoria-produto/moda/">Moda</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-20"><a href="https://lojamelhorpreco.online/categoria-produto/moda/feminino/">Feminino</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-21"><a href="https://lojamelhorpreco.online/categoria-produto/moda/masculino/">Masculino</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-17"><a href="https://lojamelhorpreco.online/categoria-produto/beleza/">Beleza</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-18"><a href="https://lojamelhorpreco.online/categoria-produto/brinquedos/">Brinquedos</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-22"><a href="https://lojamelhorpreco.online/categoria-produto/ofertas-do-dia/">Ofertas do Dia</a></li>
+<li class="header-divider"></li><li class="account-item has-icon menu-item">
+
+<a href="https://lojamelhorpreco.online/minha-conta/" class="account-link account-login" title="Minha conta">
+    <span class="header-account-title">
+    Minha conta  </span>
+</a>
+
+
+<ul class="children">
+    
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard is-active active">
+          <a href="https://lojamelhorpreco.online/minha-conta/">Painel</a>
+      <!-- empty -->
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders">
+          <a href="https://lojamelhorpreco.online/minha-conta/orders/">Pedidos</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--downloads">
+          <a href="https://lojamelhorpreco.online/minha-conta/downloads/">Downloads</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address">
+          <a href="https://lojamelhorpreco.online/minha-conta/edit-address/">Endereço</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account">
+          <a href="https://lojamelhorpreco.online/minha-conta/edit-account/">Detalhes da conta</a>
+        </li>
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout">
+    <a href="https://lojamelhorpreco.online/minha-conta/customer-logout/">Sair</a>
+  </li>
+</ul>
+</li>
+<li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons" ><a href="http://url" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon plain facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook" ></i></a><a href="http://url" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram" class="icon plain  instagram tooltip" title="Follow on Instagram" aria-label="Follow on Instagram"><i class="icon-instagram" ></i></a><a href="http://url" target="_blank" rel="noopener noreferrer nofollow" data-label="TikTok" class="icon plain tiktok tooltip" title="Follow on TikTok" aria-label="Follow on TikTok"><i class="icon-tiktok" ></i></a></div></li><li class="html custom html_topbar_right">Rastrear pedido</li><li class="html custom html_top_right_text">Garantia de 90 dias</li>			</ul>
+		
+		
+	</div>
+
+	
+</div>
+            <!--
+            NOTE: These &quot;Asset CleanUp Pro: Page Speed Booster&quot; messages are only shown to you, the HTML comment is not visible for the regular visitor.
+            The website is in LIVE MODE as &quot;Test Mode&quot; is not enabled. All the plugin changes are visible for everyone: logged-in administrators and regular visitors.            -->
+            <script type="rocketlazyloadscript"  data-rocket-type='text/javascript' data-wpacu-own-inline-script="true">
+                console.log('Asset CleanUp Pro: &quot;LIVE MODE&quot; (test mode is not enabled, thus, all the plugin changes are visible for everyone: you, the logged-in administrator and the regular visitors)');
+            </script>
+				<div class="flatsome-cookies">
+		<div class="flatsome-cookies__inner">
+			<div class="flatsome-cookies__text">
+				Utilizamos cookies para lhe oferecer uma melhor experiência de navegação. Ao navegar neste site, você concorda com o uso de cookies.			</div>
+			<div class="flatsome-cookies__buttons">
+								<a href="#" target="_self" class="button primary is-outline flatsome-cookies__accept-btn"  >
+    <span>Accept</span>
+  </a>
+			</div>
+		</div>
+	</div>
+	<script type="text/template" id="tmpl-elementor-templates-modal__header">
+	<div class="elementor-templates-modal__header__logo-area"></div>
+	<div class="elementor-templates-modal__header__menu-area"></div>
+	<div class="elementor-templates-modal__header__items-area">
+		<# if ( closeType ) { #>
+			<div class="elementor-templates-modal__header__close elementor-templates-modal__header__close--{{{ closeType }}} elementor-templates-modal__header__item">
+				<# if ( 'skip' === closeType ) { #>
+				<span>Pular</span>
+				<# } #>
+				<i class="eicon-close" aria-hidden="true" title="Fechar"></i>
+				<span class="elementor-screen-only">Fechar</span>
+			</div>
+		<# } #>
+		<div id="elementor-template-library-header-tools"></div>
+	</div>
+</script>
+
+<script type="text/template" id="tmpl-elementor-templates-modal__header__logo">
+	<span class="elementor-templates-modal__header__logo__icon-wrapper e-logo-wrapper">
+		<i class="eicon-elementor"></i>
+	</span>
+	<span class="elementor-templates-modal__header__logo__title">{{{ title }}}</span>
+</script>
+<script type="text/template" id="tmpl-elementor-finder">
+	<div id="elementor-finder__search">
+		<i class="eicon-search"></i>
+		<input id="elementor-finder__search__input" placeholder="Digite para encontrar algo no Elementor" autocomplete="off">
+	</div>
+	<div id="elementor-finder__content"></div>
+</script>
+
+<script type="text/template" id="tmpl-elementor-finder-results-container">
+	<div id="elementor-finder__no-results">Nenhum resultado encontrado</div>
+	<div id="elementor-finder__results"></div>
+</script>
+
+<script type="text/template" id="tmpl-elementor-finder__results__category">
+	<div class="elementor-finder__results__category__title">{{{ title }}}</div>
+	<div class="elementor-finder__results__category__items"></div>
+</script>
+
+<script type="text/template" id="tmpl-elementor-finder__results__item">window.addEventListener('DOMContentLoaded', function() {
+	<a href="{{ url }}" class="elementor-finder__results__item__link">
+		<div class="elementor-finder__results__item__icon">
+			<i class="eicon-{{{ icon }}}"></i>
+		</div>
+		<div class="elementor-finder__results__item__title">{{{ title }}}</div>
+		<# if ( description ) { #>
+			<div class="elementor-finder__results__item__description">- {{{ description }}}</div>
+		<# } #>
+	</a>
+	<# if ( actions.length ) { #>
+		<div class="elementor-finder__results__item__actions">
+		<# jQuery.each( actions, function() { #>
+			<a class="elementor-finder__results__item__action elementor-finder__results__item__action--{{ this.name }}" href="{{ this.url }}" target="_blank">
+				<i class="eicon-{{{ this.icon }}}"></i>
+			</a>
+		<# } ); #>
+		</div>
+	<# } #>
+});</script>
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script type="text/template" id="tmpl-variation-template">
+	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+	<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+</script>
+<script type="text/template" id="tmpl-unavailable-variation-template">
+	<p>Desculpe, este produto não está disponível. Escolha uma combinação diferente.</p>
+</script>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.6.7.0' id='jquery-blockui-js' defer></script>
+<script type='text/javascript' id='wc-add-to-cart-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Ver carrinho","cart_url":"https:\/\/lojamelhorpreco.online\/carrinho\/","is_cart":"","cart_redirect_after_add":"yes"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=6.7.0' id='wc-add-to-cart-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.6.7.0' id='js-cookie-js' defer></script>
+<script type='text/javascript' id='woocommerce-js-extra'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=6.7.0' id='woocommerce-js' defer></script>
+<script type='text/javascript' id='wc-cart-fragments-js-extra'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_de37a9c0451bc25079531b295d1e75a2","fragment_name":"wc_fragments_de37a9c0451bc25079531b295d1e75a2","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='wcst_public_js-js-extra'>
+/* <![CDATA[ */
+var wcst_data = {"version":"2.11.0","ajax_url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin-ajax.php","wc_version":"6.7.0","currency":"R$","timezone_diff":"-10800","date_format":"d\/m\/Y","wc_decimal_count":"2","wc_decimal_sep":",","wc_thousand_sep":".","hard_texts":{"someone":"someone","other":"other","others":"others","from":"from","in":"in","month":"month","months":"months","week":"week","weeks":"weeks","day":"day","days":"days","hr":"hr","hrs":"hrs","min":"min","mins":"mins","sec":"sec","secs":"secs","&":"&"},"current_postid":"0","wcstajax_url":"https:\/\/lojamelhorpreco.online\/?wcstajax=yes","l":"Valid"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/xl-woocommerce-sales-triggers/assets/js/wcst_combined.min.js?ver=2.11.0' id='wcst_public_js-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/iconic-woo-attribute-swatches-premium/assets/vendor/flickity/flickity.pkgd.min.js?ver=1.10.0' id='flickity-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/woocommerce/assets/js/accounting/accounting.min.js?ver=0.4.2' id='accounting-js' defer></script>
+<script type='text/javascript' id='iconic-was-scripts-js-extra'>
+/* <![CDATA[ */
+var iconic_was_vars = {"ajaxurl":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin-ajax.php","nonce":"ae06ef3757","is_mobile":"","currency":{"format_num_decimals":2,"format_symbol":"&#82;&#36;","format_decimal_sep":",","format_thousand_sep":".","format":"%s&nbsp;%v","price_display_suffix":""},"i18n":{"calculating":"Calculando o pre\u00e7o...","no_selection":"Nenhuma sele\u00e7\u00e3o"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/iconic-woo-attribute-swatches-premium/assets/frontend/js/main.min.js?ver=1.10.0' id='iconic-was-scripts-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-instant-page/flatsome-instant-page.js?ver=1663599885' id='flatsome-instant-page-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=1663599885' id='flatsome-live-search-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/hoverIntent.min.js?ver=1.10.2' id='hoverIntent-js' defer></script>
+<script type='text/javascript' id='flatsome-js-js-extra'>
+/* <![CDATA[ */
+var flatsomeVars = {"theme":{"version":"3.15.5"},"ajaxurl":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"100","assets_url":"https:\/\/lojamelhorpreco.online\/wp-content\/themes\/flatsome\/assets\/js\/","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":true},"i18n":{"mainMenu":"Menu Principal","toggleButton":"Toggle"},"options":{"cookie_notice_version":"1","swatches_layout":"","swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"},"is_mini_cart_reveal":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/flatsome.js?ver=1663599885' id='flatsome-js-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/inc/extensions/flatsome-cookie-notice/flatsome-cookie-notice.js?ver=1663599885' id='flatsome-cookie-notice-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/extensions/flatsome-swatches-frontend.js?ver=1663599885' id='flatsome-swatches-frontend-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.1' id='jquery-ui-mouse-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.1' id='jquery-ui-draggable-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/underscore.min.js?ver=1.13.3' id='underscore-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/backbone.min.js?ver=1.4.1' id='backbone-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/lib/backbone/backbone.marionette.min.js?ver=2.4.5.e1' id='backbone-marionette-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/lib/backbone/backbone.radio.min.js?ver=1.0.4' id='backbone-radio-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/js/common-modules.min.js?ver=3.6.7' id='elementor-common-modules-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' id='elementor-web-cli-js-before'>
+var elementorWebCliConfig = {"isDebug":false,"urls":{"rest":"https:\/\/lojamelhorpreco.online\/wp-json\/","assets":"https:\/\/lojamelhorpreco.online\/wp-content\/plugins\/elementor\/assets\/"},"nonce":"ab756ce532"};
+var elementorWebCliConfig = {"isDebug":false,"urls":{"rest":"https:\/\/lojamelhorpreco.online\/wp-json\/","assets":"https:\/\/lojamelhorpreco.online\/wp-content\/plugins\/elementor\/assets\/"},"nonce":"ab756ce532"};
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/js/web-cli.min.js?ver=3.6.7' id='elementor-web-cli-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0' id='elementor-dialog-js' defer></script>
+<script type='text/javascript' id='wp-api-request-js-extra'>
+/* <![CDATA[ */
+var wpApiSettings = {"root":"https:\/\/lojamelhorpreco.online\/wp-json\/","nonce":"ab756ce532","versionString":"wp\/v2\/"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/api-request.min.js?ver=6.0.3' id='wp-api-request-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/dist/hooks.min.js?ver=c6d64f2cb8f5c6bb49caca37f8828ce3' id='wp-hooks-js'></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/dist/i18n.min.js?ver=ebee46757c6a411e38fd079a7ac71d94' id='wp-i18n-js'></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' id='elementor-common-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "elementor", {"translation-revision-date":"2022-06-08 08:54:13+0000","generator":"GlotPress\/4.0.0-alpha.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"pt_BR"},"The file exceeds the maximum upload size for this site.":["O arquivo excede o tamanho m\u00e1ximo de envio para este site."],"Uploading...":["Enviando\u2026"],"Enable Unfiltered File Uploads":["Permitir envio de arquivos sem filtrar"],"Unable to connect":["N\u00e3o \u00e9 poss\u00edvel conectar"],"Finder":["Explorador"],"Enable":["Ativar"]}},"comment":{"reference":"assets\/js\/common.js"}} );
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' id='elementor-common-js-before'>
+var elementorCommonConfig = {"version":"3.6.7","isRTL":false,"isDebug":false,"isElementorDebug":false,"activeModules":["ajax","finder","connect","event-tracker"],"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"e_import_export":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true},"urls":{"assets":"https:\/\/lojamelhorpreco.online\/wp-content\/plugins\/elementor\/assets\/","rest":"https:\/\/lojamelhorpreco.online\/wp-json\/"},"filesUpload":{"unfilteredFiles":true},"library_connect":{"is_connected":false,"subscription_plans":{"0":{"label":null,"promotion_url":null,"color":null},"1":{"label":"Pro","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro&utm_term=flatsome","color":"#92003B"},"20":{"label":"Expert","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=goexpert&utm_term=flatsome","color":"#010051"}},"base_access_level":0,"current_access_level":0},"ajax":{"url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin-ajax.php","nonce":"aaa6641bde"},"finder":{"data":{"edit":{"title":"Editar","dynamic":true,"name":"edit"},"general":{"title":"Geral","dynamic":false,"items":{"saved-templates":{"title":"Modelos salvos","icon":"library-save","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/edit.php?post_type=elementor_library&tabs_group=library","keywords":["template","section","page","library"]},"system-info":{"title":"Informa\u00e7\u00f5es do sistema","icon":"info-circle-o","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-system-info","keywords":["system","info","environment","elementor"]},"role-manager":{"title":"Gerenciador de fun\u00e7\u00f5es","icon":"person","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-role-manager","keywords":["role","manager","user","elementor"]},"knowledge-base":{"title":"Base de conhecimento","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=go_knowledge_base_site","keywords":["help","knowledge","docs","elementor"]},"theme-builder":{"title":"Construtor de tema","icon":"library-save","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-app&ver=3.6.7#site-editor\/promotion","keywords":["template","header","footer","single","archive","search","404","library"]},"kit-library":{"title":"Biblioteca de Kits","icon":"kit-parts","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-app&ver=3.6.7#\/kit-library","keywords":["kit library","kit","library","site parts","parts","assets","templates"]}},"name":"general"},"create":{"title":"Criar","dynamic":false,"items":{"page":{"title":"Add New Page Template","icon":"plus-circle-o","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=page&_wpnonce=a9f6c159e9","keywords":["Add New Page Template","post","page","template","new","create"]},"section":{"title":"Adicionar novo Se\u00e7\u00e3o","icon":"plus-circle-o","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=section&_wpnonce=a9f6c159e9","keywords":["Adicionar novo Se\u00e7\u00e3o","post","page","template","new","create"]},"wp-post":{"title":"Adicionar novo Post","icon":"plus-circle-o","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&template_type=wp-post&_wpnonce=a9f6c159e9","keywords":["Adicionar novo Post","post","page","template","new","create"]},"wp-page":{"title":"Adicionar novo P\u00e1gina","icon":"plus-circle-o","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&template_type=wp-page&_wpnonce=a9f6c159e9","keywords":["Adicionar novo P\u00e1gina","post","page","template","new","create"]},"landing-page":{"title":"Adicionar novo P\u00e1gina de Aterrissagem","icon":"plus-circle-o","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/edit.php?action=elementor_new_post&post_type=e-landing-page&template_type=landing-page&_wpnonce=a9f6c159e9#library","keywords":["Adicionar novo P\u00e1gina de Aterrissagem","post","page","template","new","create"]},"wfacp_checkout":{"title":"Adicionar novo Confira","icon":"plus-circle-o","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/edit.php?action=elementor_new_post&post_type=wfacp_checkout&_wpnonce=a9f6c159e9","keywords":["Adicionar novo Confira","post","page","template","new","create"]}},"name":"create"},"site":{"title":"Site","dynamic":false,"items":{"homepage":{"title":"In\u00edcio","url":"https:\/\/lojamelhorpreco.online","icon":"home-heart","keywords":["home","page"]},"wordpress-dashboard":{"title":"Painel","icon":"dashboard","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/","keywords":["dashboard","wordpress"]},"wordpress-menus":{"title":"Menus","icon":"wordpress","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/nav-menus.php","keywords":["menu","wordpress"]},"wordpress-themes":{"title":"Temas","icon":"wordpress","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/themes.php","keywords":["themes","wordpress"]},"wordpress-customizer":{"title":"Personalizar","icon":"wordpress","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/customize.php","keywords":["customizer","wordpress"]},"wordpress-plugins":{"title":"Plugins","icon":"wordpress","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/plugins.php","keywords":["plugins","wordpress"]},"wordpress-users":{"title":"Usu\u00e1rios","icon":"wordpress","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/users.php","keywords":["users","profile","wordpress"]}},"name":"site"},"settings":{"title":"Configura\u00e7\u00f5es","dynamic":false,"items":{"general-settings":{"title":"Configura\u00e7\u00f5es gerais","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor","keywords":["general","settings","elementor"]},"advanced":{"title":"Avan\u00e7ado","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor#tab-advanced","keywords":["advanced","settings","elementor"]},"experiments":{"title":"Experimentos","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor#tab-experiments","keywords":["settings","elementor","experiments"]}},"name":"settings"},"tools":{"title":"Ferramentas","dynamic":false,"items":{"tools":{"title":"Ferramentas","icon":"tools","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-tools","keywords":["tools","regenerate css","safe mode","debug bar","sync library","elementor"]},"replace-url":{"title":"Substituir URL","icon":"tools","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url","keywords":["tools","replace url","domain","elementor"]},"maintenance-mode":{"title":"Modo de manuten\u00e7\u00e3o","icon":"tools","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode","keywords":["tools","maintenance","coming soon","elementor"]},"import-export":{"title":"Import Export","icon":"import-export","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-tools#tab-import-export-kit","keywords":["tools","import export","import","export","kit"]},"version-control":{"title":"Controle de Vers\u00e3o","icon":"time-line","url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-tools#tab-versions","keywords":["tools","version","control","rollback","beta","elementor"]}},"name":"tools"}}},"connect":[],"event-tracker":{"isUserDataShared":false}};
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/js/common.min.js?ver=3.6.7' id='elementor-common-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' id='elementor-app-loader-js-before'>
+var elementorAppConfig = {"menu_url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-app&ver=3.6.7#site-editor\/promotion","assets_url":"https:\/\/lojamelhorpreco.online\/wp-content\/plugins\/elementor\/assets\/","return_url":"https:\/\/lojamelhorpreco.online\/wp-admin\/","hasPro":false,"admin_url":"https:\/\/lojamelhorpreco.online\/wp-admin\/","login_url":"https:\/\/lojamelhorpreco.online\/wp-login.php","base_url":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-app&ver=3.6.7","site-editor":[],"import-export":[],"kit-library":[],"onboarding":[]};
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/js/app-loader.min.js?ver=3.6.7' id='elementor-app-loader-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1663599885' id='flatsome-theme-woocommerce-js-js' defer></script>
+<!--[if IE]>
+<script data-wpacu-script-handle='intersection-observer-polyfill' type='text/javascript' src='https://cdn.jsdelivr.net/npm/intersection-observer-polyfill@0.1.0/dist/IntersectionObserver.js?ver=0.1.0' id='intersection-observer-polyfill-js'></script>
+<![endif]-->
+<script type='text/javascript' id='wc-simulador-parcelas-js-extra'>
+/* <![CDATA[ */
+var WCSimuladorParcelasParams = {"currency_format_num_decimals":"2","currency_format_symbol":"R$","currency_format_decimal_sep":",","currency_format_thousand_sep":".","currency_format":"%s\u00a0%v","rounding_precision":"6","max_installments":"12","max_installments_no_fee":"3","min_installment":"5","fees":{"1":"3","2":"3","3":"3","4":"3","5":"3","6":"3","7":"3","8":"3","9":"3","10":"3","11":"3","12":"3"},"fee":"3","without_fee_label":"sem juros","with_fee_label":"com juros"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/cache/min/1/wp-content/plugins/wc-simulador-parcelas/assets/js/simulador-parcelas.js?ver=1663599885' id='wc-simulador-parcelas-js' defer></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/wp-util.min.js?ver=6.0.3' id='wp-util-js' defer></script>
+<script type='text/javascript' id='wc-add-to-cart-variation-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_no_matching_variations_text":"Desculpe, nenhum produto atende sua sele\u00e7\u00e3o. Escolha uma combina\u00e7\u00e3o diferente.","i18n_make_a_selection_text":"Selecione uma das op\u00e7\u00f5es do produto antes de adicion\u00e1-lo ao carrinho.","i18n_unavailable_text":"Desculpe, este produto n\u00e3o est\u00e1 dispon\u00edvel. Escolha uma combina\u00e7\u00e3o diferente."};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=6.7.0' id='wc-add-to-cart-variation-js' defer></script>
+<!--[if IE]>
+<script data-wpacu-script-handle='css-vars-polyfill' type='text/javascript' src='https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.0.1/ie11CustomProperties.min.js?ver=4.0.1' id='css-vars-polyfill-js'></script>
+<![endif]-->
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.6.7' id='elementor-webpack-runtime-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.6.7' id='elementor-frontend-modules-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' id='elementor-admin-bar-js-before'>
+var elementorAdminBarConfig = {"elementor_edit_page":{"id":"elementor_edit_page","title":"Editar com Elementor","href":"https:\/\/lojamelhorpreco.online\/wp-admin\/post.php?post=35&action=elementor","children":{"36":{"id":"elementor_site_settings","title":"Configura\u00e7\u00f5es do site","sub_title":"Site","href":"https:\/\/lojamelhorpreco.online\/wp-admin\/post.php?post=35&action=elementor#e:run:panel\/global\/open","class":"elementor-site-settings","parent_class":"elementor-second-section"},"37":{"id":"elementor_app_site_editor","title":"Construtor de tema","sub_title":"Site","href":"https:\/\/lojamelhorpreco.online\/wp-admin\/admin.php?page=elementor-app&ver=3.6.7#site-editor\/promotion","class":"elementor-app-link","parent_class":"elementor-second-section"}}}};
+</script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-content/plugins/elementor/assets/js/elementor-admin-bar.min.js?ver=3.6.7' id='elementor-admin-bar-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/hoverintent-js.min.js?ver=2.2.1' id='hoverintent-js-js' defer></script>
+<script type="rocketlazyloadscript"   data-rocket-type='text/javascript' src='https://lojamelhorpreco.online/wp-includes/js/admin-bar.min.js?ver=6.0.3' id='admin-bar-js' defer></script>
+
+<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
