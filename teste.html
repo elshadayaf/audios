@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Atual</title>
+</head>
+<body>
+    <p id="mensagemData"></p>
+
+    <script>
+        function formatarData(data) {
+            const dia = data.getDate().toString().padStart(2, '0');
+            const mes = (data.getMonth() + 1).toString().padStart(2, '0'); // O mês começa de 0 (janeiro) a 11 (dezembro)
+            const ano = data.getFullYear();
+            
+            return `Hoje, ${dia}/${mes}/${ano} as 00:00h`;
+        }
+
+        function atualizarData() {
+            const dataAtual = new Date();
+            const mensagem = formatarData(dataAtual);
+            document.getElementById('mensagemData').innerText = mensagem;
+        }
+
+        atualizarData();
+    </script>
+</body>
+</html>
